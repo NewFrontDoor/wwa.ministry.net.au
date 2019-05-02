@@ -1,0 +1,70 @@
+#registration-form > .form-control{
+ margin-bottom: 10px;
+}
+
+.event-details{
+    padding-top: 120px;
+    font-weight: bold;
+}
+
+label{
+    font-weight: normal !important;
+}
+
+.form-required{
+    color: red;
+    font-weight: bold;
+}
+
+.glyphicon-envelope{
+    font-size: 34px;
+    color: #4c4d64;
+    
+}
+a:hover > .glyphicon{
+    color:#F2EDD7;
+    opacity: 1;
+}
+
+#footer .credits .email i{
+width: auto;
+position: relative;
+margin-top: -10px;
+}
+
+.slider-img{
+    max-height: 250px;
+    display: inline-block;
+}
+
+.navbar-brand>span{
+    /*font-family: futura-pt, sans-serif;*/
+    font-family: bebas-neue, sans-serif;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+#footer {
+    background-color: #2D2E49;
+}
+
+#footer .credits .copyright{
+    color:#F2EDD7 !important;
+}
+
+.navbar.navbar-inverse{
+    background: rgba(45, 46, 73, 0.5);
+    border-bottom: 1px solid #585858;
+    color: #333;
+}
+
+.navbar.sticky {
+    background: #2D2E49;
+    border-bottom: 1px solid #2D2E49;
+}
+
+.navbar .container .navbar-header .navbar-brand {
+color: #F2EDD7;
+}
