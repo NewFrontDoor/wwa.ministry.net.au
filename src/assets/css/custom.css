@@ -68,3 +68,10 @@ margin-top: -10px;
 .navbar .container .navbar-header .navbar-brand {
 color: #F2EDD7;
 }
+
+.footer-link{
+    color: #D2C29D;
+}
+.footer-link:hover{
+    color: #f9dc7a;
+}

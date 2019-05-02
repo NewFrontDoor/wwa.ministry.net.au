@@ -19,7 +19,7 @@ export default () => (
                     </div>
                     <div className="row copyright">
                         <div className="col-md-12">
-                            © 2019 Women's Weekend Away.  Website by <a href="https://newfrontdoor.org/" target="_blank" rel="noreferrer noopener" style={{ color: "#f9dc7a" }}>New Front Door</a>.
+                            © 2019 Women's Weekend Away.  Website by <a href="https://newfrontdoor.org/" target="_blank" rel="noreferrer noopener" className="footer-link">New Front Door</a>.
                         </div>
                     </div>
                 </div>
