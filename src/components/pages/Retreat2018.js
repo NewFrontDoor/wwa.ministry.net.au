@@ -23,7 +23,6 @@ class Sermons extends Component {
 
         getFromDrupalAPI('wwa_talks_api', function (data) {
             that.setState({ talks: data });
-            console.log(that.state.talks)
         });
     }
 
@@ -58,7 +57,7 @@ class Sermons extends Component {
                 <div>
                     <img src={Banner} alt="" className="img img-responsive page-banner" />
                 </div>
-                <div class="section_header">
+                <div className="section_header">
                     <h3>Talks</h3>
                 </div>
                 <div className="talks-container">
