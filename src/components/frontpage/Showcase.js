@@ -13,22 +13,17 @@ export default () => (
                     {/* Feature */}
                     <div className="col-sm-4 feature first">
                         <div className="img_box">
-                            <a href="#">
-                                <img alt="" src="img/service2.png" />
-                                <span className="circle">
-                                    <span className="plus">&#43;</span>
-                                </span>
-                            </a>
+                            <img alt="" src="img/service2.png" />
                         </div>
                         <div className="text">
                             <h6>What is WWA?</h6>
-                            <p>One weekend a year, the Presbyterian Church of Tasmania hosts a weekend for all women to gather together for a time of biblical teaching, worshiping together and encouragement.</p>
+                            <p>Women's Weekend Away is a weekend retreat for women to gather together for a time of biblical teaching, worship and friendship.</p>
                         </div>
                     </div>
                     {/* Feature */}
                     <div className="col-sm-4 feature">
                         <div className="img_box">
-                            <a href="#">
+                            <a href="/2019Retreat">
                                 <img alt="" src="img/service1.png" />
                                 <span className="circle">
                                     <span className="plus">&#43;</span>
@@ -36,8 +31,8 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>Where & When</h6>
-                            <p>Specific details on the event location and times will be announced soon.</p>
+                            <h6>About Our 2019 Retreat</h6>
+                            <p>Learn more about this years topic, meet our speakers and check out the program.</p>
                         </div>
                     </div>
                     {/* Feature */}
@@ -52,7 +47,7 @@ export default () => (
                         </div>
                         <div className="text">
                             <h6>Register</h6>
-                            <p>If you are interested in joining us please register on <a href="/Register">this page</a>.</p>
+                            <p>Don't miss out - <a href="/Register">register now</a> to secure your spot.</p>
 
                         </div>
                     </div>

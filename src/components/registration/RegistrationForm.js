@@ -140,9 +140,6 @@ class RegistrationForm extends Component {
     if (validator.isEmpty(this.state.postcode)) {
       errorMessage += "Please enter your postcode.\n";
     }
-    if (validator.isEmpty(this.state.dietary)) {
-      errorMessage += "Please enter your dietary requirements.\n";
-    }
     if (validator.isEmpty(this.state.comments)) {
       errorMessage += "Please enter any relevant comments you may have\n";
     }
@@ -292,8 +289,8 @@ class RegistrationForm extends Component {
     if (!this.state.formValid && registrationsOpen) {
       registrationForm = (
         <section>
-          <p>TBA 2019<br />
-            Camp Clayton, Ulverstone</p>
+          <p>6th - 8th September 2019<br />
+            <a href="https://goo.gl/maps/srXi3etamE7zDfgPA" rel="noreferrer noopener" target="_blank">Camp Clayton, Ulverstone</a></p>
 
           <p>Registrations Close TBA 2019</p>
 
@@ -302,28 +299,28 @@ class RegistrationForm extends Component {
 
             <h3 style={{ color: "#000" }}>Contact Information</h3>
 
-            <label>First Name </label>{requiredField}
+            <label><strong>First Name</strong> </label>{requiredField}
             <input className="form-control form-text required" type="text" name="firstName" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.firstName} />
 
-            <label>Last Name </label>{requiredField}
+            <label><strong>Last Name </strong></label>{requiredField}
             <input className="form-control form-text required" type="text" name="lastName" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.lastName} />
 
-            <label>Email </label>{requiredField}
+            <label><strong>Email</strong> </label>{requiredField}
             <input className="form-control form-text required" type="text" name="email" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.email} />
 
-            <label>Phone Number </label>{requiredField}
+            <label><strong>Phone Number </strong></label>{requiredField}
             <input className="form-control form-text required" type="text" name="phone" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.phone} />
 
-            <label>Address </label>{requiredField}
+            <label><strong>Address</strong> </label>{requiredField}
             <input className="form-control form-text required" type="text" name="address" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.address} />
 
-            <label>Suburb </label>{requiredField}
+            <label><strong>Suburb</strong> </label>{requiredField}
             <input className="form-control form-text required" type="text" name="suburb" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.suburb} />
 
             {/*}<label>State </label>{requiredField}
             <input className="form-control form-text required" type="text" name="state" size="60" maxLength="128" onChange={this.handleChange.bind(this)} value={this.state.state} />
 */}
-            <label>State</label>{requiredField}<br />
+            <label><strong>State</strong></label>{requiredField}<br />
             <select name="state" value={this.state.state} onChange={this.handleChange.bind(this)}>
               <option value="">----</option>
               <option value="act">Australian Capital Territory</option>
@@ -335,17 +332,19 @@ class RegistrationForm extends Component {
               <option value="wa">Western Australia</option>
             </select><br /><br />
 
-            <label>Postcode </label>{requiredField}
+            <label><strong>Postcode</strong> </label>{requiredField}
             <input className="form-control form-text" type="text" name="postcode" size="4" maxLength="4" onChange={this.handleChange.bind(this)} value={this.state.postcode} /><br />
 
-            <label>Age</label>{requiredField}<br />
+            <label><strong>Age</strong></label>{requiredField}<br />
             <select name="age" value={this.state.age} onChange={this.handleChange.bind(this)}>
               <option value="">----</option>
-              <option value="under18">Under 18</option>
               <option value="18to24">18-24</option>
-              <option value="25to40">25-40</option>
-              <option value="40to60">40-60</option>
-              <option value="over60">60+</option>
+              <option value="25to34">25-34</option>
+              <option value="35to44">35-44</option>
+              <option value="45to54">45-54</option>
+              <option value="55to64">55-64</option>
+              <option value="65to74">65-74</option>
+              <option value="over75">75+</option>
             </select>
 
             <h3 style={{ color: "#000" }}>Registration Information</h3>
@@ -405,23 +404,23 @@ class RegistrationForm extends Component {
 
 
             <label>
-              Dietary Requirements {requiredField} </label><br />
+              Food Allergies and Dietary Needs </label><br />
             <textarea className="form-control" name="dietary" rows="5" onChange={this.handleChange.bind(this)} value={this.state.dietary} />
-            <span style={{ fontSize: "14px" }}>Please write N/A if none</span>
-            <br /><br />
+            <br />
 
             <label>
-              Other Comments {requiredField}</label><br />
-            <textarea className="form-control" name="comments" rows="5" onChange={this.handleChange.bind(this)} value={this.state.comments} />
-            <br />
+              <strong>Other Comments</strong> {requiredField}</label><br /><br />
             <span style={{ fontSize: "14px" }}>
-              Please answer the following questions and add any other comments that you would like to pass onto the organisers.<br />
+              Please use the space below to let us know<br />
               <ul>
-                <li>Please list a few of your favourite hymns/songs</li>
+                <li>A couple of your favourite hymns/songs</li>
                 <li>Do you have a roommate request?</li>
-                <li>Do you need help with transport or are interested in carpooling?</li>
+                <li>Do you need help with transport, or able to help by carpooling?</li>
+                <li>Any other comments or questions</li>
               </ul>
-            </span>
+            </span><br />
+            <textarea className="form-control" name="comments" rows="5" onChange={this.handleChange.bind(this)} value={this.state.comments} />
+
             <br /><br />
 
             <input type="submit" value="Register" className="btn btn-primary" />
@@ -437,8 +436,8 @@ class RegistrationForm extends Component {
     else if (!this.state.formValid && !registrationsOpen) {
       registrationForm = (
         <section>
-          <p>TBA 2019<br />
-            Camp Clayton, Ulverstone</p>
+          <p>6th - 8th September 2019<br />
+            <a href="https://goo.gl/maps/srXi3etamE7zDfgPA" rel="noreferrer noopener" target="_blank">Camp Clayton, Ulverstone</a></p>
           <p>Registrations Close TBA 2019</p>
 
           <h3 style={{ color: "#000" }}>Registrations for this event have now closed.</h3>

@@ -6,8 +6,8 @@ import './assets/css/custom.css';
 
 import Navigation from './components/Navigation'
 import Footer from './components/Footer';
-import RegistrationForm from './components/registration/RegistrationForm';
 import frontPage from './components/frontpage/HomePageWrapper';
+import OtherPageWrapper from './components/pages/OtherPageWrapper';
 
 function App() {
   return (
@@ -16,9 +16,8 @@ function App() {
         <Route path="*" component={Navigation} />
 
         <Route exact path="/" component={frontPage} />
+        <Route path="/:path" component={OtherPageWrapper} />
 
-
-        <Route exact path="/Register" component={RegistrationForm} />
         <Route path="*" component={Footer} />
       </div>
     </Router>

@@ -3,8 +3,10 @@
 }
 
 .event-details{
-    padding-top: 120px;
     font-weight: bold;
+}
+#other-page-wrapper{
+    margin-top: 100px;
 }
 
 label{
@@ -17,7 +19,7 @@ label{
 }
 
 .glyphicon-envelope{
-    font-size: 34px;
+    font-size: 33px;
     color: #4c4d64;
     
 }
@@ -26,10 +28,26 @@ a:hover > .glyphicon{
     opacity: 1;
 }
 
+.fa-spotify{
+    font-size: 33px;
+    color: #4c4d64;
+    position: relative;
+    top: -3.5px;
+    
+}
+a:hover > .fa-spotify{
+    color:#1ed760;
+    opacity: 1;
+}
+
+.spotify{
+        width: auto;
+    position: relative;
+}
+
 #footer .credits .email i{
 width: auto;
 position: relative;
-margin-top: -10px;
 }
 
 .slider-img{
@@ -74,4 +92,35 @@ color: #F2EDD7;
 }
 .footer-link:hover{
     color: #f9dc7a;
+}
+
+.navbar .container .collapse .nav .dropdown .dropdown-menu > li > a:hover{
+    background: #4c4d64
+}
+
+.btn-primary{
+    background: #4c4d64;
+    border-color: #2D2E49;
+}
+
+.btn-primary:hover{
+    background: #2D2E49;
+    border-color: #2D2E49;
+}
+
+
+.talk-container{
+    margin-top: 60px;
+}
+.talk-container>div {
+    line-height: 30px;
+}
+
+.page-banner{
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+
+.no-bottom-margin{
+    margin-bottom: 0 !important;
 }

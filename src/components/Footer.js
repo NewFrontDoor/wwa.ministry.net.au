@@ -11,7 +11,11 @@ export default () => (
                                 <span className="socialicons ico1"></span>
                                 <span className="socialicons_h ico1h"></span>
                             </a>
-                            <a href="mailto:pctas.wwa@gmail.com" target="blank" className="email">
+
+                            <a href="/SpotifyPlaylist" target="_blank" rel="noreferrer noopener" className="spotify">
+                                <i className="fab fa-spotify"></i>
+                            </a>
+                            <a href="mailto:pctas.wwa@gmail.com" target="_blank" rel="noreferrer noopener" className="email">
                                 <i className="glyphicon glyphicon-envelope"></i>
                             </a>
 

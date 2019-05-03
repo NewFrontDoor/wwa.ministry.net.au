@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 export default () => (
@@ -18,20 +19,28 @@ export default () => (
             <div className="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
                 <ul className="nav navbar-nav navbar-right">
                     <li className="active"><a href="/">HOME</a></li>
-                    <li><a href="/Register">Register</a></li>
-                    {/*<li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">PAGES <b className="caret"></b></a>
+
+                    <li className="dropdown">
+                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">About Us<b className="caret"></b></a>
                         <ul className="dropdown-menu">
-                            <li><a href="features.html">Features</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="portfolio-item.html">Portfolio Item</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                            <li><a href="sign-in.html">Sign in</a></li>
-                            <li><a href="sign-up.html">Sign up</a></li>
-                            <li><a href="backgrounds.html">Backgrounds</a></li>
+                            <li><a href="/WhatWeBelieve">What We Believe</a></li>
+                            <li><a href="/Committee">Meet the Committee</a></li>
                         </ul>
-                    </li>*/}
+                    </li>
+
+                    <li><a href="/2019Retreat">This Years' Retreat</a></li>
+
+
+                    <li className="dropdown">
+                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">Resources<b className="caret"></b></a>
+                        <ul className="dropdown-menu">
+                            <li><a href="/2018Retreat">2018 Retreat</a></li>
+                            <li><a href="/SpotifyPlaylist">Worship</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/Register">Register</a></li>
+
                 </ul>
             </div>
         </div>
