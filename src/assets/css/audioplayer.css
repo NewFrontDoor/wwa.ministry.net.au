@@ -158,12 +158,12 @@
     word-break: break-all;
     margin: 0;
     font-size: 19.2px;
-    color: #fff; }
+    color: #F2EDD7; }
   .audio_player .audio_time_progress {
     margin-right: 10px;
     -ms-grid-row-align: center;
         align-self: center;
-    color: #fff;
+    color: #F2EDD7;
     font-size: 16px; }
   .audio_player .audio_button {
     padding-left: 11px;
@@ -188,7 +188,7 @@
   .audio_player .play_pause_button .left {
     height: 100%;
     float: left;
-    background-color: #fff;
+    background-color: #F2EDD7;
     width: 36%;
     transition: all 0.25s ease;
     overflow: hidden; }
@@ -216,7 +216,7 @@
     height: 100%;
     float: right;
     width: 36%;
-    background-color: #fff;
+    background-color: #F2EDD7;
     transition: all 0.25s ease; }
   .audio_player .play_pause_button.paused .left {
     width: 50%; }
@@ -240,7 +240,7 @@
   .audio_player .skip_button .right_facing_triangle {
     width: 0;
     height: 0;
-    border-left: 16px solid #fff;
+    border-left: 16px solid #F2EDD7;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent; }
   @media screen and (min-width: 370px) {
