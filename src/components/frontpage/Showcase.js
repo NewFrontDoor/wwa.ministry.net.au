@@ -31,7 +31,7 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>About Our 2019 Retreat</h6>
+                            <h6>2019 Weekend Away</h6>
                             <p>Learn more about this years topic, meet our speakers and check out the program.</p>
                         </div>
                     </div>

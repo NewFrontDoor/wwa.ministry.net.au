@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 
 import _ from 'lodash'
 import { decode } from 'he'
-import { getFromDrupalAPI } from '../../utils/fetchJSON';
+import { getFromDrupalAPI } from '../../../utils/fetchJSON';
 import AudioPlayer from 'react-responsive-audio-player';
-import '../../assets/css/audioplayer.css'
+import '../../../assets/css/audioplayer.css'
 
-import Banner from '../../assets/img/Retreat2018.png';
+import Banner from '../../../assets/img/Retreat2018.png';
 
 class Sermons extends Component {
     constructor() {
@@ -54,7 +54,7 @@ class Sermons extends Component {
 
         return (
             <section className="container">
-                <div>
+                <div className="text-center">
                     <img src={Banner} alt="" className="img img-responsive page-banner" />
                 </div>
                 <div className="section_header">
