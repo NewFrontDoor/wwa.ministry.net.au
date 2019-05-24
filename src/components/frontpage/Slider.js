@@ -1,5 +1,5 @@
 import React from 'react';
-import WWA2019 from '../../assets/img/WWA_2019.png'
+import WWA2019 from '../../assets/img/WWA_2019-2.png'
 
 export default () => (
         <section id="static-img-slider">

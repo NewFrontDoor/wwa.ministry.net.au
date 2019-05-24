@@ -250,8 +250,8 @@ position: relative;
     color: #fff;
     width: 31%;
     display: inline-block;
-    background: rgba(0,0,0,0.5);
-    margin-top: 120px;
+
+    margin-top: 100px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -259,6 +259,8 @@ position: relative;
     margin-top: 0;
     font-family: bebas-neue, sans-serif;
     text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px #000;
     
   }
 
