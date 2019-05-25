@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import validator from 'validator';
 import { escape } from 'he'
-import { Table } from 'react-bootstrap';
 
 import PaypalConfirmation from './confirmations/Paypal';
 import ChequeDDConfirmation from './confirmations/ChequeDD';
@@ -19,7 +18,7 @@ const dayPrice = 20;
 const breakfastCost = 9;
 const lunchCost = 16;
 const dinnerCost = 19
-const registrationCutoff = new Date('2019-09-03 00:00');
+const registrationCutoff = new Date('2019-09-06 00:00');
 const registrationsOpen = registrationCutoff.getTime() > Date.now();
 const earlyBirdCutoff = new Date('2019-07-13');
 const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
@@ -214,21 +213,14 @@ class RegistrationForm extends Component {
         form.append("submission[data][11][values][1]", 'saturday');
         form.append("submission[data][11][values][2]", 'sunday');
 
-        if (this.state.weekendDinnerAttendance) {
+        if (this.state.weekendDinnerAttendance === "yes") {
           form.append("submission[data][12][values][0]", 'fridayDinner');
-          form.append("submission[data][12][values][1]", 'saturdayBreakfast');
-          form.append("submission[data][12][values][2]", 'saturdayLunch');
-          form.append("submission[data][12][values][3]", 'saturdayDinner');
-          form.append("submission[data][12][values][4]", 'sundayBreakfast');
-          form.append("submission[data][12][values][5]", 'sundayLunch');
         }
-        else {
-          form.append("submission[data][12][values][0]", 'saturdayBreakfast');
-          form.append("submission[data][12][values][1]", 'saturdayLunch');
-          form.append("submission[data][12][values][2]", 'saturdayDinner');
-          form.append("submission[data][12][values][3]", 'sundayBreakfast');
-          form.append("submission[data][12][values][4]", 'sundayLunch');
-        }
+        form.append("submission[data][12][values][0]", 'saturdayBreakfast');
+        form.append("submission[data][12][values][1]", 'saturdayLunch');
+        form.append("submission[data][12][values][2]", 'saturdayDinner');
+        form.append("submission[data][12][values][3]", 'sundayBreakfast');
+        form.append("submission[data][12][values][4]", 'sundayLunch');
       }
       else {
         if (this.state.allMealsRequired === "yes") {
