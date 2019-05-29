@@ -133,6 +133,9 @@ position: relative;
     .desktop-only{
         display: none;
     }
+    .person-container{
+        height: 430px !important;
+    }
 }
 @media (min-width: 768px) {
     .mobile-only{
@@ -211,10 +214,14 @@ position: relative;
 }
 
 .electives-container{
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 /*Committee Page*/
+.person-container{
+    margin-top: 70px;
+    height: 530px;
+}
 .person-name{
     font-size: 24px;
   margin-bottom: 8px;
@@ -234,6 +241,10 @@ position: relative;
     height: 160px;
     border-radius: 20%;
   } 
+  .person-bio{
+      margin-top: -20px;
+      font-size: 15px;
+  }
 
   .header-container{
       
@@ -271,4 +282,8 @@ position: relative;
 
   .song-list>li{
     padding-top: 18px;
+  }
+
+  .img-border-20{
+      border-radius: 20%;
   }

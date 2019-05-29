@@ -19,14 +19,14 @@ export default () => (
                             <img alt="" src={WhatIsWWA} />
                         </div>
                         <div className="text">
-                            <h6>What is WWA?</h6>
-                            <p style={{ fontSize: "16px" }}>Women's Weekend Away is a weekend retreat for women to gather together for a time of biblical teaching, worship and friendship.</p>
+                            <h6>About Us</h6>
+                            <p style={{ fontSize: "16px" }}>Learn more about <a href="/OurMission">Out Mission</a>, <a href="/WhatWeBelieve">What We Believe</a> and <a href="/Committee">Meet the Committee</a>.</p>
                         </div>
                     </div>
                     {/* Feature */}
                     <div className="col-sm-4 feature">
                         <div className="img_box">
-                            <a href="/2019Retreat">
+                            <a href="/2019Weekend">
                                 <img alt="" src={Weekend2019} />
                                 <span className="circle">
                                     <span className="plus">&#43;</span>

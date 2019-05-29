@@ -23,28 +23,23 @@ export default () => (
                     <li className="dropdown">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">About Us<b className="caret"></b></a>
                         <ul className="dropdown-menu">
+                            <li><a href="/OurMission">Our Mission</a></li>
                             <li><a href="/WhatWeBelieve">What We Believe</a></li>
                             <li><a href="/Committee">Meet the Committee</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/2019Retreat">2019 Weekend</a></li>
-                    <li><a href="/2020Retreat">2020 Weekend</a></li>
+                    <li><a href="/2019Weekend">2019 Weekend</a></li>
+                    <li><a href="/2020Weekend">2020 Weekend</a></li>
 
-                    {/*<li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">Retreats<b className="caret"></b></a>
-                        <ul className="dropdown-menu">
-                            <li><a href="/2018Retreat">2018 Weekend Away</a></li>
-                            <li><a href="/2020Retreat">2020 Weekend Away</a></li>
-                        </ul>
-                    </li>*/}
+
 
 
                     <li className="dropdown">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">Resources<b className="caret"></b></a>
                         <ul className="dropdown-menu">
-                            <li><a href="/2018Retreat">2018 Retreat</a></li>
-                            <li><a href="/Worship">Worship</a></li>
+                            <li><a href="/2018Weekend">2018 Weekend</a></li>
+                            {/*<li><a href="/Worship">Worship</a></li>*/}
                         </ul>
                     </li>
 

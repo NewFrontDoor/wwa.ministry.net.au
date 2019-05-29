@@ -8,6 +8,7 @@ import AudioPlayer from 'react-responsive-audio-player';
 import '../../../assets/css/audioplayer.css'
 
 import Banner from '../../../assets/img/Retreat2018.png';
+import Caitlin from '../../../assets/img/Caitlin Orr.png';
 
 class Sermons extends Component {
     constructor() {
@@ -57,15 +58,27 @@ class Sermons extends Component {
                 <div className="text-center">
                     <img src={Banner} alt="" className="img img-responsive page-banner" />
                 </div>
-                <p>
-                    In 2018 we look at what does Bible say about friendship? As Christians, how should we be thinking about friendship? How do we respond biblically when friendship fails or friends hurt us?
+                <div className="row col-md-12">
+                    <p>
+                        In 2018 we look at what does Bible say about friendship? As Christians, how should we be thinking about friendship? How do we respond biblically when friendship fails or friends hurt us?
                 </p><br />
-                <p>
-                    We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from Moore Theological College in 2014 and works as an assistant minister at St Peters Watsons Bay, Sydney where she ministers to the women in her parish.
-                </p>
 
-                <div className="talks-container">
-                    {talks}
+                    <div className="desktop-only">
+                        <img src={Caitlin} alt="" className="img img-responsive img-border-20" style={{ float: "right", maxHeight: "240px" }} />
+                    </div>
+
+
+                    <p style={{ marginTop: "4em" }}>
+                        We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from Moore Theological College in 2014 and works as an assistant minister at St Peters Watsons Bay, Sydney where she ministers to the women in her parish.
+                </p>
+                    <div className="text-center mobile-only">
+                        <img src={Caitlin} alt="" className="img img-responsive mobile-image img-border-20" style={{ marginTop: "20px", display: "inline-block", maxHeight: "240px" }} />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="talks-container">
+                        {talks}
+                    </div>
                 </div>
             </section>
         );
