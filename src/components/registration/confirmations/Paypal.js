@@ -27,7 +27,7 @@ class Paypal extends Component {
           <input type="hidden" name="currency_code" value="AUD" />
           <input type="hidden" name="upload" value="1" />
           <input type="hidden" name="no_shipping" value="1" />
-          <input type="hidden" name="return" value={"http://pwwa.newfrontdoor.org/paypal_confirmation/" + this.state.sid} />
+          <input type="hidden" name="return" value={"http://wwa.ministry.net.au/paypal_confirmation/" + this.state.sid} />
           <input type="hidden" name="amount_1" value={this.state.totalCost} />
           <input type="hidden" name="quantity_1" value="1" />
           <input type="hidden" name="item_name_1" value={"PWWA " + this.state.registrationType + " registration"} />

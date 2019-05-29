@@ -9,6 +9,7 @@ import Retreat2020 from './Retreats/Retreat2020';
 import Worship from './Resources/Worship';
 import WhatWeBelieve from './AboutUs/WhatWeBelieve';
 import OurMission from './AboutUs/OurMission';
+import PaypalReturn from '../registration/confirmations/PaypalReturn';
 
 
 
@@ -25,6 +26,8 @@ export default () => (
             <Route exact path="/OurMission" component={OurMission} />
             <Route exact path="/WhatWeBelieve" component={WhatWeBelieve} />
             <Route exact path="/Committee" component={MeetTheCommittee} />
+
+            <Route exact path="/paypal_confirmation/" component={PaypalReturn} />
         </div>
     </Router>
 )
