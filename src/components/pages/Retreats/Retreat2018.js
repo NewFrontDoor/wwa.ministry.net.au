@@ -54,32 +54,35 @@ class Sermons extends Component {
         }
 
         return (
-            <section className="container">
-                <div className="text-center">
+            <section>
+                <div className="text-center banner-container" style={{ marginTop: "-18px", backgroundColor: "#6a8768", marginBottom: "30px" }}>
                     <img src={Banner} alt="" className="img img-responsive page-banner" />
                 </div>
-                <div className="row col-md-12">
-                    <p>
-                        In 2018 we look at what does Bible say about friendship? As Christians, how should we be thinking about friendship? How do we respond biblically when friendship fails or friends hurt us?
+
+                <section className="container">
+                    <div className="row col-md-12">
+                        <p>
+                            In 2018 we look at what does Bible say about friendship? As Christians, how should we be thinking about friendship? How do we respond biblically when friendship fails or friends hurt us?
                 </p><br />
 
-                    <div className="desktop-only">
-                        <img src={Caitlin} alt="" className="img img-responsive img-border-20" style={{ float: "right", maxHeight: "240px" }} />
-                    </div>
+                        <div className="desktop-only">
+                            <img src={Caitlin} alt="" className="img img-responsive img-border-20" style={{ marginTop: "20px", float: "right", maxHeight: "180px" }} />
+                        </div>
 
 
-                    <p style={{ marginTop: "4em" }}>
-                        We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from Moore Theological College in 2014 and works as an assistant minister at St Peters Watsons Bay, Sydney where she ministers to the women in her parish.
+                        <p style={{ marginTop: "4em" }}>
+                            We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from Moore Theological College in 2014 and works as an assistant minister at St Peters Watsons Bay, Sydney where she ministers to the women in her parish.
                 </p>
-                    <div className="text-center mobile-only">
-                        <img src={Caitlin} alt="" className="img img-responsive mobile-image img-border-20" style={{ marginTop: "20px", display: "inline-block", maxHeight: "240px" }} />
+                        <div className="text-center mobile-only">
+                            <img src={Caitlin} alt="" className="img img-responsive mobile-image img-border-20" style={{ marginTop: "20px", display: "inline-block", maxHeight: "180px" }} />
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="talks-container">
-                        {talks}
+                    <div className="row">
+                        <div className="talks-container">
+                            {talks}
+                        </div>
                     </div>
-                </div>
+                </section>
             </section>
         );
     }

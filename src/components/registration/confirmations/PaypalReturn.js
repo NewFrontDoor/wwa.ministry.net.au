@@ -10,7 +10,7 @@ class PaypalReturn extends Component {
 
           Until then, stay up to date on our Facebook Page (<a href="https://www.facebook.com/WWATasmania/" target="_blank" rel="noreferrer noopener">@WWATasmania</a>). We look forward to seeing you soon!</p>
         <br />
-        <a href="/"><input type="button" value="Register Somebody Else?" className="btn btn-primary" /></a>
+        <a href="/Register"><input type="button" value="Register Somebody Else?" className="btn btn-primary" /></a>
       </section>
     );
   }

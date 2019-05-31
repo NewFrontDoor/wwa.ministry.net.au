@@ -1,6 +1,6 @@
 /*eslint-disable */
 import React from 'react';
-import WhatIsWWA from '../../assets/img/What is WWA.png';
+import WhatIsWWA from '../../assets/img/AboutUs.png';
 import Weekend2019 from '../../assets/img/2019 weekend away.png';
 import Register from '../../assets/img/Register.png';
 

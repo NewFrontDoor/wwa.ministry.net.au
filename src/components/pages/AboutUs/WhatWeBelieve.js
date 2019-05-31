@@ -39,6 +39,6 @@ export default () => (
         </p>
         <br />
 
-        <p>(From the <a href="http://pctas.org.au/" target="_blank" rel="noreferrer noopener">Statement of belief from Presbyterian of Tasmania</a>)</p>
+        <p style={{ fontSize: "14px" }}>(From the <a href="http://pctas.org.au/" target="_blank" rel="noreferrer noopener">Statement of belief from Presbyterian of Tasmania</a>)</p>
     </section>
 )

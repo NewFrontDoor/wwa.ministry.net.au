@@ -35,12 +35,12 @@ export default () => (
             <br />
             <br />
             <p>
-                “This year at WWA I’m looking forward to stepping aside from my full schedule and reflecting on God’s word, discussing it and grappling with how it changes our lives, chatting with others, walking on the beach and Pilates with Bec.”<br />
+                <em>“This year at WWA I’m looking forward to stepping aside from my full schedule and reflecting on God’s word, discussing it and grappling with how it changes our lives, chatting with others, walking on the beach and Pilates with Bec.”</em><br />
 
             </p>
-            <ul style={{ marginLeft: "10%" }}>
-                <li>Rachel Bain, Coordinator</li>
-            </ul>
+            <p style={{ marginLeft: "10%" }}>
+                — Rachel Bain, Coordinator
+            </p>
         </div>
 
 
