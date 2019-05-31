@@ -125,6 +125,9 @@ class Retreat2019 extends Component {
             </p>
                         <br /> <br />
                         <a href="/Register"><input type="button" className="btn btn-primary " value="Register Now for the 2019 Weekend Away" /></a>
+
+                        <br /><br /><br />
+                        <em>Unfortunately children cannot be provided for, however mothers with babies are welcome.</em>
                     </div>
                 </section >
             </section>

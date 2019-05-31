@@ -314,7 +314,7 @@ class RegistrationForm extends Component {
 
           {earlyBirdValid ? <p>Early Bird Closes 12th July 2019<br /></p> : ''}
           <p>Registrations Close 9th August 2019</p>
-
+          <em style={{ fontWeight: "normal" }}>Unfortunately children cannot be provided for, however mothers with babies are welcome.</em>
 
           <br />
           <form onSubmit={this.handleSubmit} id="registration-form">
