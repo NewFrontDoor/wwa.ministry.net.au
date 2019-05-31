@@ -7,8 +7,10 @@ class Person extends Component {
         return (
             <div className={`person-container col-md-6 col-sm-6 col-xs-12 ${this.props.mobileHeight}`}>
                 <div className="row col-xs-12">
-                    <div className="col-sm-7">
-                        <div className="person-image">
+
+                    <div className="col-xs-7" style={{ float: "left" }} >
+
+                        <div className="person-image" >
                             <img src={this.props.image} alt={this.props.name} />
                         </div>
                         <div className="person-name">
@@ -16,11 +18,13 @@ class Person extends Component {
                         </div>
                         <div className="person-title">
                             {this.props.title}
-                        </div>
-                    </div>
+                        </div></div>
+                    <div className="bio-fix" style={{ marginTop: "160px" }} />
                     <div className="bio-container col-xs-12">
                         <div className="person-bio" dangerouslySetInnerHTML={{ __html: this.props.bio }} />
                     </div>
+
+
 
 
                 </div>
