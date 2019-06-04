@@ -22,7 +22,7 @@ export default () => (
         </p>
             <br />
             <p>
-                We often don’t get a chance to still our hearts and ask What is God saying to me in this season of life. But we know that sound biblical teaching (theology) leads to the praise of God (doxology). That right thinking leads to right desires which leads to right actions; head to heart to hands.
+                We often don’t get a chance to still our hearts and ask <em>What is God saying to me in this season of life</em>. But we know that sound biblical teaching (theology) leads to the praise of God (doxology). That right thinking leads to right desires which leads to right actions; head to heart to hands.
         </p>
             <br />
             <p>

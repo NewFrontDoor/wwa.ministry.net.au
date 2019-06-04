@@ -220,10 +220,7 @@ position: relative;
 }
 
 /*Committee Page*/
-@media (max-width: 450px) {
-.committee-sm{
-    display: none
-}}
+
 
 @media (max-width: 521px) {
     .mh-610px{
@@ -238,13 +235,13 @@ position: relative;
 }
 @media (max-width: 380px) {
     .mh-610px{
-        height: 610px !important;
+        height: 600px !important;
     }
     .mh-620px{
-        height: 620px !important;
+        height: 610px !important;
     }
     .mh-650px{
-        height: 650px !important;
+        height: 630px !important;
     }
 }
 @media (max-width: 345px) {
@@ -297,13 +294,6 @@ position: relative;
    
 }
 
-@media (max-width: 460px) {
-    .person-bio{
-        padding-top:270px;
-    }
-   
-}
-
 .person-container{
     margin-top: 30px;
 
@@ -341,7 +331,7 @@ position: relative;
       min-height: 360px;
       background-repeat: no-repeat;
       background-position: center; 
-      /*background-size: 100% 100%;*/
+      background-size: 100% 100%;
   }
 
   .header-info{
