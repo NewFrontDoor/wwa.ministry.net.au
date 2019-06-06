@@ -71,7 +71,7 @@ class Sermons extends Component {
 
 
                         <p style={{ marginTop: "0.5em" }}>
-                            We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from Moore Theological College in 2014 and works as an assistant minister at St Peters Watsons Bay, Sydney where she ministers to the women in her parish.
+                            We were blessed to have Caitlin Orr come and speak. She is passionate about thinking through what it means to be a friend from a biblical perspective and most importantly she is keen to equip women to "do" friendship in a broken world. Caitlin graduated from <a href="https://www.moore.edu.au/" target="_blank" rel="noreferrer noopener">Moore Theological College</a> in 2014 and works as an assistant minister at <a href="https://www.watsonsbayanglican.net/" target="_blank" rel="noreferrer noopener">St Peters Watsons Bay</a>, Sydney where she ministers to the women in her parish.
                 </p>
                         <div className="text-center mobile-only">
                             <img src={Caitlin} alt="" className="img img-responsive mobile-image img-border-20" style={{ marginTop: "20px", display: "inline-block", maxHeight: "180px" }} />

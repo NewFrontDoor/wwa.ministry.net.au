@@ -19,7 +19,7 @@ class Retreat2019 extends Component {
                         {/*<img alt="" className="img img-responsive slider-img" src={WWA2019} />*/}
                         <div className="header-info text-center">
                             <br />
-                            <div>Loving God - Loving Others</div><br />
+                            <div style={{ fontSize: "36px", lineHeight: "50px" }}>Loving God - Loving Others</div><br />
                         </div>
 
                     </div>
