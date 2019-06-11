@@ -19,9 +19,11 @@ const breakfastCost = 9;
 const lunchCost = 16;
 const dinnerCost = 19
 const registrationCutoff = new Date('2019-09-06 00:00');
-const registrationsOpen = registrationCutoff.getTime() > Date.now();
-const earlyBirdCutoff = new Date('2019-07-13');
-const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
+//const registrationsOpen = registrationCutoff.getTime() > Date.now();
+const registrationsOpen = true;
+//const earlyBirdCutoff = new Date('2019-07-13');
+//const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
+const earlyBirdValid = true;
 const currentFullCost = earlyBirdValid ? fullWeekendEarlyPrice : fullWeekendPrice;
 
 class RegistrationForm extends Component {
@@ -375,7 +377,7 @@ class RegistrationForm extends Component {
             <label><strong>Registration Type</strong></label>{requiredField}<br />
 
             <select name="registrationType" value={this.state.registrationType} onChange={this.handleChange.bind(this)}>
-              {earlyBirdCutoff.getTime() > Date.now() ? (<option value="full">(Early Bird) Residential - ${currentFullCost}</option>) : (<option value="full"> Residential - ${currentFullCost}</option>)}
+              {earlyBirdValid ? (<option value="full">(Early Bird) Residential - ${currentFullCost}</option>) : (<option value="full"> Residential - ${currentFullCost}</option>)}
               <option value="youngWomen">Young Women (13-18) - ${fullYoungWomenCost}</option>
               <option value="nonResidential">Non-Residential - ${fullNonResidential}</option>
             </select>
