@@ -4,7 +4,7 @@ class PaypalReturn extends Component {
   render() {
     return (
       <section className="container">
-        <p>Thank you for registering for the 2018 Women&apos;s Weekend Away.<br /><br />
+        <p>Thank you for registering for the Women&apos;s Weekend Away.<br /><br />
 
           You will receive a confirmation of registration email, containing some of the things you need to know about the upcoming camp. <br /><br />
 

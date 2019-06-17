@@ -205,11 +205,16 @@ class RegistrationForm extends Component {
 
       form.append("submission[data][21][values][0]", escape(this.state.age));
       form.append("submission[data][8][values][0]", escape(this.state.postcode).replace(/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D])/g, ''));
-      form.append("submission[data][9][values][0]", escape(this.state.registrationType));
+      if (this.state.registrationType === "full" && earlyBirdValid) {
+        form.append("submission[data][9][values][0]", "earlyBird");
+      }
+      else {
+        form.append("submission[data][9][values][0]", escape(this.state.registrationType));
+      }
 
 
 
-      if (this.state.registrationType === 'full' || this.state.registrationType === 'earlyBird' || this.state.registrationType === "youngWomen") {
+      if (this.state.registrationType === 'full' || this.state.registrationType === 'earlyBird') {
         form.append("submission[data][10][values][0]", escape(this.state.weekendDinnerAttendance));
         form.append("submission[data][11][values][0]", 'friday');
         form.append("submission[data][11][values][1]", 'saturday');
@@ -217,12 +222,20 @@ class RegistrationForm extends Component {
 
         if (this.state.weekendDinnerAttendance === "yes") {
           form.append("submission[data][12][values][0]", 'fridayDinner');
+          form.append("submission[data][12][values][1]", 'saturdayBreakfast');
+          form.append("submission[data][12][values][2]", 'saturdayLunch');
+          form.append("submission[data][12][values][3]", 'saturdayDinner');
+          form.append("submission[data][12][values][4]", 'sundayBreakfast');
+          form.append("submission[data][12][values][5]", 'sundayLunch');
         }
-        form.append("submission[data][12][values][0]", 'saturdayBreakfast');
-        form.append("submission[data][12][values][1]", 'saturdayLunch');
-        form.append("submission[data][12][values][2]", 'saturdayDinner');
-        form.append("submission[data][12][values][3]", 'sundayBreakfast');
-        form.append("submission[data][12][values][4]", 'sundayLunch');
+        else {
+          form.append("submission[data][12][values][0]", 'saturdayBreakfast');
+          form.append("submission[data][12][values][1]", 'saturdayLunch');
+          form.append("submission[data][12][values][2]", 'saturdayDinner');
+          form.append("submission[data][12][values][3]", 'sundayBreakfast');
+          form.append("submission[data][12][values][4]", 'sundayLunch');
+        }
+
       }
       else {
         if (this.state.allMealsRequired === "yes") {
@@ -385,7 +398,7 @@ class RegistrationForm extends Component {
 
 
 
-            {this.state.registrationType === "full" || this.state.registrationType === "youngWomen" ? (<section>
+            {this.state.registrationType === "full" ? (<section>
               <strong>Will you be attending the Friday night dinner? </strong><br />
               <label> Yes &nbsp;</label><input type="radio" name="weekendDinnerAttendance" value="yes" onChange={this.handleChange.bind(this)} checked={this.state.weekendDinnerAttendance === "yes"} /><br />
               <label> No &nbsp;</label><input type="radio" name="weekendDinnerAttendance" value="no" onChange={this.handleChange.bind(this)} checked={this.state.weekendDinnerAttendance === "no"} /><br />
@@ -401,15 +414,22 @@ class RegistrationForm extends Component {
                   <label> Yes &nbsp;</label><input type="radio" name="allMealsRequired" value="yes" onChange={this.handleChange.bind(this)} checked={this.state.allMealsRequired === "yes"} /> &nbsp;
             <label> No &nbsp;</label><input type="radio" name="allMealsRequired" value="no" onChange={this.handleChange.bind(this)} checked={this.state.allMealsRequired === "no"} /><br />
 
-                  {this.state.allMealsRequired === "no" ? (<section><strong>Friday</strong><br />
-                    <label><input type="checkbox" name="fridayDinner" value={this.state.fridayDinner} onChange={this.handleChange.bind(this)} />&nbsp;Dinner&nbsp;</label><br />
-                    <strong>Saturday</strong><br />
-                    <label><input type="checkbox" name="saturdayBreakfast" value={this.state.saturdayBreakfast} onChange={this.handleChange.bind(this)} />&nbsp;Breakfast&nbsp;</label>
-                    <label><input type="checkbox" name="saturdayLunch" value={this.state.saturdayLunch} onChange={this.handleChange.bind(this)} />&nbsp;Lunch &nbsp;</label>
-                    <label><input type="checkbox" name="saturdayDinner" value={this.state.saturdayDinner} onChange={this.handleChange.bind(this)} />&nbsp;Dinner &nbsp;</label><br />
-                    <strong>Sunday</strong><br />
-                    <label><input type="checkbox" name="sundayBreakfast" value={this.state.sundayBreakfast} onChange={this.handleChange.bind(this)} />&nbsp;Breakfast &nbsp;</label>
-                    <label><input type="checkbox" name="sundayLunch" value={this.state.sundayLunch} onChange={this.handleChange.bind(this)} />&nbsp;Lunch &nbsp;</label><br /></section>)
+                  {this.state.allMealsRequired === "no" ? (<section>
+                    <br /><span>I will need:</span>
+                    <div className="row">
+                      <div className="col-sm-6 col-xs-12">
+                        <div className="col-sm-6"><label><input type="checkbox" name="fridayDinner" value={this.state.fridayDinner} onChange={this.handleChange.bind(this)} />&nbsp;Friday Dinner&nbsp;</label><br />
+                          <label><input type="checkbox" name="saturdayBreakfast" value={this.state.saturdayBreakfast} onChange={this.handleChange.bind(this)} />&nbsp;Saturday Breakfast&nbsp;</label><br />
+                          <label><input type="checkbox" name="saturdayLunch" value={this.state.saturdayLunch} onChange={this.handleChange.bind(this)} />&nbsp;Saturday Lunch &nbsp;</label><br /></div>
+
+                        <div className="col-sm-6">
+                          <label><input type="checkbox" name="saturdayDinner" value={this.state.saturdayDinner} onChange={this.handleChange.bind(this)} />&nbsp;Saturday Dinner &nbsp;</label><br />
+                          <label><input type="checkbox" name="sundayBreakfast" value={this.state.sundayBreakfast} onChange={this.handleChange.bind(this)} />&nbsp;Sunday Breakfast &nbsp;</label><br />
+                          <label><input type="checkbox" name="sundayLunch" value={this.state.sundayLunch} onChange={this.handleChange.bind(this)} />&nbsp;Sunday Lunch &nbsp;</label><br />
+                        </div>
+                      </div>
+                    </div>
+                  </section>)
                     : ''
                   }
 
