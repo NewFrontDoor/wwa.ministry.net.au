@@ -405,7 +405,7 @@ class RegistrationForm extends Component {
             </section>) : (
                 <section>
                   <strong>Please select which days you will be attending:</strong><br />
-                  <label><input type="checkbox" name="friday" value={this.state.friday} onChange={this.handleChange.bind(this)} /> &nbsp;Friday </label><br />
+                  <label><input type="checkbox" name="friday" value={this.state.friday} onChange={this.handleChange.bind(this)} /> &nbsp;Friday Night </label><br />
                   <label><input type="checkbox" name="saturday" value={this.state.saturday} onChange={this.handleChange.bind(this)} /> &nbsp;Saturday </label><br />
                   <label><input type="checkbox" name="sunday" value={this.state.sunday} onChange={this.handleChange.bind(this)} /> &nbsp;Sunday </label><br /><br />
                   <strong>Please select which meals will be required:</strong><br />
