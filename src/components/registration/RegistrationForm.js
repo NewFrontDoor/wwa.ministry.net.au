@@ -23,7 +23,7 @@ const registrationCutoff = new Date('2019-09-06 00:00');
 const registrationsOpen = true;
 //const earlyBirdCutoff = new Date('2019-07-13');
 //const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
-const earlyBirdValid = true;
+const earlyBirdValid = false;
 const currentFullCost = earlyBirdValid ? fullWeekendEarlyPrice : fullWeekendPrice;
 
 class RegistrationForm extends Component {
