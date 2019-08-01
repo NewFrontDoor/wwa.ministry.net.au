@@ -30,7 +30,7 @@ class Paypal extends Component {
           <input type="hidden" name="return" value={"http://wwa.ministry.net.au/paypal_confirmation/" + this.state.sid} />
           <input type="hidden" name="amount_1" value={this.state.totalCost} />
           <input type="hidden" name="quantity_1" value="1" />
-          <input type="hidden" name="item_name_1" value={"WWA " + this.state.registrationType + " registration" + this.state.sid} />
+          <input type="hidden" name="item_name_1" value={"WWA " + this.state.registrationType + " registration " + this.state.sid} />
           <input type="Submit" name="submit" value="Complete Payment with Paypal" />
         </form>
 
