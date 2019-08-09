@@ -20,7 +20,7 @@ const lunchCost = 16;
 const dinnerCost = 19
 const registrationCutoff = new Date('2019-09-06 00:00');
 //const registrationsOpen = registrationCutoff.getTime() > Date.now();
-const registrationsOpen = true;
+const registrationsOpen = false;
 //const earlyBirdCutoff = new Date('2019-07-13');
 //const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
 const earlyBirdValid = false;
@@ -499,8 +499,10 @@ class RegistrationForm extends Component {
 
           {earlyBirdValid ? <p>Early Bird Closes 12th July 2019<br /></p> : ''}
           <p>Registrations Close 9th August 2019</p>
-
+          <br />
           <h3 style={{ color: "#000" }}>Registrations for this event have now closed.</h3>
+          <br /><br />
+          <p>If you have any questions regarding the event please contact <a href="mailto:admin@wwa.ministry.net.au">admin@wwa.ministry.net.au</a></p>
         </section>
       )
     }
