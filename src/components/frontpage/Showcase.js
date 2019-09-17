@@ -1,4 +1,3 @@
-/*eslint-disable */
 import React from 'react';
 import WhatIsWWA from '../../assets/img/AboutUs.png';
 import Weekend2019 from '../../assets/img/2019 weekend away.png';
@@ -50,7 +49,7 @@ export default () => (
                         </div>
                         <div className="text">
                             <h6>Register</h6>
-                            <p style={{ fontSize: "16px" }}>Don't miss out - <a href="/Register">register now</a> to secure your spot.</p>
+                            <p style={{ fontSize: "16px" }}>Registrations for our 2019 Weekend Away have now closed. However we hope you can join us next year - <a href="/2020Weekend">find out more here</a></p>
 
                         </div>
                     </div>

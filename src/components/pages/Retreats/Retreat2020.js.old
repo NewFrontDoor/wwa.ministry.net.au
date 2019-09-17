@@ -1,0 +1,29 @@
+/*eslint-disable*/
+import React, { Component } from 'react';
+
+
+
+class Retreat2020 extends Component {
+
+    render() {
+
+
+        return (
+            <section className="container">
+                <div className="section_header">
+                    <h3>2020 Weekend Away</h3>
+                </div>
+
+                {/*<div className="text-center">
+                    <img src={Banner} alt="" className="img img-responsive page-banner" />
+                </div>*/}
+
+                <h3>Save the date!</h3>
+                <h3>Women's Weekend Away 2020 will be from the 18th - 20th September.</h3>
+
+            </section>
+        );
+    }
+}
+
+export default Retreat2020;

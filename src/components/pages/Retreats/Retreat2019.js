@@ -124,12 +124,11 @@ class Retreat2019 extends Component {
                             We're excited this year to be able to offer you an optional pilates session with Bec Wilcher, a local Hobart Physio. If you're interested in joining in you will need to bring an exercise mat. No prior experience required, all ages and physical abilities welcome - the only prerequisite is that you're able to get down and up from the floor.
             </p>
                         <br /> <br />
-                        <a href="/Register"><input type="button" className="btn btn-primary " value="Register Now for the 2019 Weekend Away" /></a>
 
                         <br /><br /><br />
                         <em>Unfortunately children cannot be provided for, however mothers with babies are welcome.</em>
                     </div>
-                </section >
+                </section>
             </section>
         );
     }

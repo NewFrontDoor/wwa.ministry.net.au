@@ -14,31 +14,29 @@ class Worship extends Component {
                 </div>
 
                 <p>
-                    Singing is one way that we worship as Christians and is an important part of our weekend together. Follow us on Spotify for a playlist of songs we've sung during our weekend together.
+                    <em>Sing and make music from your heart to the Lord, always giving thanks to God the Father for everything, in the name of our Lord Jesus Christ (Ephesians 5:19b – 20)</em>
                 </p>
                 <br /><br />
-                <p>
-                    Psalm 7:17 I will give thanks to the Lord because of his righteousness; I will sing the praises of the name of the Lord Most High
-                </p>
+                <p>Every year during our weekend together we enjoy a time of singing together.</p>
+                <p>Below is a list of the songs that we've sung and if you want to keep enjoying the songs that we've sung you can <a href="https://open.spotify.com/playlist/03eHthhMbnJz5gn6KuWUxT">subscribe to our Spotify Playlist</a></p>
                 <br /><br />
-                <p>
-                    Below are the songs that we sung together in 2018
-                    <ul className="song-list">
-                        <li>10,000 Reasons (Bless the Lord)</li>
-                        <li>Amazing Grace</li>
-                        <li>Behold our God</li>
-                        <li>Blessed Be Your Name</li>
-                        <li>Lord be My Vision</li>
-                        <li>Rock of Ages</li>
-                        <li>This life I live</li>
-                        <li>What a friend we have in Jesus</li>
-                    </ul>
-                </p>
-
-
-
-
-
+                <table class="table">
+<thead><tr class="firstrow"><th>Song</th><th>By</th></tr></thead><tbody>
+ <tr><td>10,000 Reasons (Bless The Lord)</td><td>Jonas Myrin; Matt Redman</td></tr>
+ <tr><td>Behold Our God</td><td>Jonathan Baird; Meghan Baird; Ryan Baird; Stephen Altrogge</td></tr>
+ <tr><td>Blessed Be Your Name</td><td>Beth Redman; Matt Redman</td></tr>
+ <tr><td>In Christ Alone</td><td>Keith Getty; Stuart Townend</td></tr>
+ <tr><td>In His Name</td><td>Charles Wesley; Gavin Perkins; Luke Woodhouse; Nathan Walter</td></tr>
+ <tr><td>Just As I Am</td><td>Charlotte Elliott; David Moffitt; Sue C. Smith; Travis Cottrell; William Batchelder Bradbury</td></tr>
+ <tr><td>Rock Of Ages</td><td>Augustus Montague Toplady; arr Ruth Buchanan</td></tr>
+ <tr><td>Speak O Lord</td><td>Keith Getty; Stuart Townend</td></tr>
+ <tr><td>There Is A Redeemer</td><td>Melody Green</td></tr>
+ <tr><td>This Life I Live</td><td>Michael Morrow</td></tr>
+ <tr><td>Undivided</td><td>Rob Smith</td></tr>
+ <tr><td>What A Friend We Have In Jesus</td><td>Charles Crozat Converse; David Paxton; Joseph Medlicott Scriven</td></tr>
+ <tr><td>You Gave Your Life (If Christ be God)</td><td>Steve Tillbrook</td></tr>
+ <tr><td>You Never Change</td><td> Rob Smith</td></tr>
+</tbody></table>
             </section>
         );
     }

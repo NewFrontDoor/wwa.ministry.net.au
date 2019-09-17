@@ -22,7 +22,7 @@ class Person extends Component {
                         <div className="person-bio" dangerouslySetInnerHTML={{ __html: this.props.bio }} />
                     </div>
                 </div>
-            </div >
+            </div>
         );
     }
 }
