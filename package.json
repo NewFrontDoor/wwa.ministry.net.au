@@ -37,5 +37,46 @@
   "devDependencies": {
     "prettier": "^1.18.2",
     "xo": "^0.25.3"
+  },
+  "xo": {
+    "extends": [
+      "xo-react",
+      "plugin:jest/recommended"
+    ],
+    "parser": "babel-eslint",
+    "prettier": true,
+    "space": true,
+    "plugins": [
+      "emotion",
+      "jest"
+    ],
+    "rules": {
+      "emotion/jsx-import": "error",
+      "emotion/no-vanilla": "error",
+      "emotion/import-from-emotion": "error",
+      "emotion/styled-import": "error"
+    },
+    "overrides": [
+      {
+        "files": "**/__tests__/**/*.js",
+        "rules": {
+          "import/no-unassigned-import": [
+            "error",
+            {
+              "allow": [
+                "@testing-library/jest-dom/extend-expect"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eslint": {
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   }
 }
