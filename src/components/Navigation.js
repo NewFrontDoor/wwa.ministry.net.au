@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 
 export default () => (
@@ -21,7 +20,8 @@ export default () => (
                     <li className="active"><a href="/">HOME</a></li>
 
                     <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">About Us<b className="caret"></b></a>
+                        <a href="#" //eslint-disable-line
+                            className="dropdown-toggle" data-toggle="dropdown">About Us<b className="caret"></b></a>
                         <ul className="dropdown-menu">
                             <li><a href="/OurMission">Our Mission</a></li>
                             <li><a href="/WhatWeBelieve">What We Believe</a></li>
@@ -32,7 +32,8 @@ export default () => (
                     <li><a href="/2019Weekend">2019 Weekend</a></li>
                     <li><a href="/2020Weekend">2020 Weekend</a></li>
                     <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown">Resources<b className="caret"></b></a>
+                        <a href="#" //eslint-disable-line
+                            className="dropdown-toggle" data-toggle="dropdown">Resources<b className="caret"></b></a>
                         <ul className="dropdown-menu">
                             <li><a href="/missions">Missions</a></li>
                             <li><a href="/Worship">Worship</a></li>

@@ -10,7 +10,7 @@
     "react-dom": "^16.8.6",
     "react-responsive-audio-player": "^1.5.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.1.2",
     "validator": "^10.11.0"
   },
   "scripts": {
@@ -33,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "xo": "^0.25.3"
   }
 }

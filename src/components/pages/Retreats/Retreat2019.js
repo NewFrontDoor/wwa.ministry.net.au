@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, { Component } from 'react';
 
 import Banner from '../../../assets/img/WWA_2019-2.png';

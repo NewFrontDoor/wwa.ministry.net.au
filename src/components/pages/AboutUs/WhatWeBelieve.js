@@ -1,7 +1,4 @@
-/*eslint-disable */
 import React from 'react';
-
-
 
 export default () => (
     <section className="container">

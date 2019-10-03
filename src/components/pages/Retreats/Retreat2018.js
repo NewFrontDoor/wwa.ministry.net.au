@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, { Component } from 'react';
 
 import _ from 'lodash'
@@ -29,11 +28,12 @@ class Sermons extends Component {
 
 
     render() {
+        var talks;
         if (!this.state.talks) {
-            var talks = <div>Loading, please wait.</div>;
+            talks = <div>Loading, please wait.</div>;
         }
         else {
-            var talks = _.map(this.state.talks, (talk) => {
+            talks = _.map(this.state.talks, (talk) => {
                 return (
                     <div className="talk-container col-xs-12" key={_.uniqueId()}>
                         <div><a href={talk.audio} target="_blank" rel="noreferrer noopener">{talk.node_title ? decode(talk.node_title) : 'Untitled'}</a></div>
@@ -43,14 +43,6 @@ class Sermons extends Component {
                     </div>
                 )
             });
-        }
-
-        let loadingIcon = null;
-        if (!this.state.sermonPages) {
-            loadingIcon = <i className="fa fa-spinner"></i>;
-        }
-        if (this.state.loadingSermons && this.state.sermonsRemaining) {
-            loadingIcon = <i className="fa fa-spinner"></i>;
         }
 
         return (
