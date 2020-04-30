@@ -11,7 +11,7 @@ import Rachel from '../../../assets/img/Rachel.png';
 
 import Libby from '../../../assets/img/Dilger,Libby.png';
 import Elya from '../../../assets/img/Richardson,Elya.png';
-import Jane from '../../../assets/img/Maarseveen,Jane.png';
+//import Jane from '../../../assets/img/Maarseveen,Jane.png';
 
 
 //import Blank from '../../../assets/img/Blank.png'
@@ -32,8 +32,6 @@ export default () => (
                 <Person name="Elya Richardson" title="Worship & Media" mobileHeight="mh-610px" image={Elya} bio="Elya is a part time postgrad student at UTAS and has been blessed to travel to North West Vietnam as part of her project. For the last couple of years she has been the youth worker at Cornerstone Presbyterian Church and loves studying God’s Word at Friday night youth group alongside a great bunch of leaders and youth. <br/><br/>In her spare time Elya has recently started learning how to restore furniture and has been learning lots as she listens to the Revive our Hearts Podcast by Nancy DeMoss Wolgemuth" />
 
                 <Person name="Lyndal Jolly" title="Communications" mobileHeight="mh-610px" image={Lyndal} bio="Lyndal is married to Dave and is a full-time mum to their 3 young boys. You may have met Lyndal when she used to work for Vision 100 as their event manager. Nowadays you’ll find Lyndal having a chat over delicious coffee, at their family business, Yellow Bernard. <br/><br/>This camp is a highlight of Lyndal’s year as she has a real passion for women of all ages coming together, to spend time drawing closer to God and each other!" />
-
-                <Person name="Jane Maarseveen" title="Missions" mobileHeight="mh-620px" image={Jane} bio="Jane has a real passion to see the gospel shared with the unreached, and from 2008 – 2012 Jane and her husband Heinz worked with OM in London, supporting those reaching out to the Muslim population there. <br/><br/>In August, Jane will be returning to Hyderabad, India where she will be overseeing a team of locals and Australasian health professionals as they provide health care to local villages. We look forward to hearing more about this during our weekend together. " />
 
                 <Person name="Naomi Petrie" title="Activities" mobileHeight="mh-620px" image={Naomi} bio="Naomi is married to Matt and they have 3 preteen/teenage boys. On the days when she’s not working as a lab technician at the state's water testing facility, you’ll find Naomi catching up with friends or if given a chance, baking some treats for her pantry. <br/><br/>Naomi and her family have recently returned from an overseas holiday, where they got to spend some time in Thailand with Ruth Davies. During that visit she found she doesn’t enjoy the heat that much, but she does like to crochet and play board games." />
 

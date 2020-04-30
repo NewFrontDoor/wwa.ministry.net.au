@@ -23,8 +23,8 @@ export function getFromDrupalAPI(url, callback) {
     })
 }
 
-export function searchDrupalSermons(query, type, callback) {
-  fetch(DRUPAL_SEARCH_WWA_TALKS + '[' + type + ']=' + query)
+export function getTalksByEventID(query, callback) {
+  fetch(DRUPAL_SEARCH_WWA_TALKS + '[event]=' + query)
     .then(resp => resp.json())
     .then(function (data) {
       callback(data);

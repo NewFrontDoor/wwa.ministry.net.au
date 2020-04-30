@@ -1,25 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //eslint-disable-line
 
 import Retreat2018 from './Retreats/Retreat2018';
 import RegistrationClosed from '../registration/RegistrationClosed'
-import Retreat2019 from './Retreats/Retreat2019';
+import Retreat2019 from './Retreats/Retreat2019.js';
 import MeetTheCommittee from './AboutUs/MeetTheCommittee';
-import Retreat2020 from './Retreats/Retreat2020';
+import Retreat2021 from './Retreats/Retreat2021';
 import Worship from './Resources/Worship';
 import Missions from './Resources/Missions';
 import WhatWeBelieve from './AboutUs/WhatWeBelieve';
 import OurMission from './AboutUs/OurMission';
 import PaypalReturn from '../registration/confirmations/PaypalReturn';
+import NotFound from './NotFound';
 
 
 
 export default () => (
-    <Router>
-        <div id="other-page-wrapper">
+
+    <div id="other-page-wrapper">
+        <Switch>
             <Route exact path="/2018Weekend" component={Retreat2018} />
             <Route exact path="/2019Weekend" component={Retreat2019} />
-            <Route exact path="/2020Weekend" component={Retreat2020} />
+            <Route exact path="/2021Weekend" component={Retreat2021} />
             <Route exact path="/Worship" component={Worship} />
             <Route exact path="/Missions" component={Missions} />
 
@@ -30,6 +32,8 @@ export default () => (
             <Route exact path="/Committee" component={MeetTheCommittee} />
 
             <Route exact path="/paypal_confirmation/" component={PaypalReturn} />
-        </div>
-    </Router>
+
+            <Route path="/*" component={NotFound} />
+        </Switch>
+    </div>
 )

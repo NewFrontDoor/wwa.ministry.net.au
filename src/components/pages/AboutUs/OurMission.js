@@ -29,7 +29,7 @@ export default () => (
         </p>
             <br />
             <p>
-                Check out <a href="/2019Weekend">2019 Weekend</a> for more info on this year’s weekend away.
+                Sadly due to Covid-19 we've had to postpone our 2020 Weekend Away. However we'd love you to save the date for next year (10th - 12th September 2021).
         </p>
             <br />
             <br />

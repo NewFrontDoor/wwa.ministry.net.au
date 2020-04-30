@@ -12,7 +12,7 @@ class Retreat2020 extends Component {
                         {/*<img alt="" className="img img-responsive slider-img" src={WWA2019} />*/}
                         <div className="header-info text-center">
                             <br />
-                            <div style={{ fontSize: "36px", lineHeight: "50px" }}>2020 Weekend Away</div><br />
+                            <div style={{ fontSize: "36px", lineHeight: "50px" }}>2021 Weekend Away</div><br />
                         </div>
 
                     </div>
@@ -20,9 +20,9 @@ class Retreat2020 extends Component {
                 </section>
                 <section className="container">
                     <div className="col-md-12">
-                    <h3>Save the date!</h3>
-                    <h4>Women's Weekend Away 2020 will be from the 18th - 20th September at <a href="https://www.google.com/maps/place/Camp+Clayton/@-41.160476,146.222076,3740m/data=!3m1!1e3!4m5!3m4!1s0x0:0x4acb99ea69ccacc0!8m2!3d-41.160476!4d146.222076">Camp Clayton</a>.</h4>
-                    <p>In 2020 we’re looking forward to welcoming Kylie Evans to our Weekend Away! More details about the topic coming soon</p>
+                        <h3>Save the date!</h3>
+                        <h4>Women's Weekend Away 2021 will be from the 10th - 12th September at  <a href="https://www.google.com/maps/place/Camp+Clayton/@-41.160476,146.222076,3740m/data=!3m1!1e3!4m5!3m4!1s0x0:0x4acb99ea69ccacc0!8m2!3d-41.160476!4d146.222076">Camp Clayton</a>.</h4>
+                        <p>We’re looking forward to welcoming Kylie Evans to our Weekend Away! More details about the topic coming soon</p>
                         <br />
                         <h3>Meet the Speaker</h3>
 

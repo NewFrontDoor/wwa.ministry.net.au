@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import _ from 'lodash'
 import { decode } from 'he'
-import { getFromDrupalAPI } from '../../../utils/fetchJSON';
+import { getTalksByEventID } from '../../../utils/fetchJSON';
 import AudioPlayer from 'react-responsive-audio-player';
 import '../../../assets/css/audioplayer.css'
 
@@ -21,7 +21,7 @@ class Sermons extends Component {
     componentWillMount() {
         var that = this;
 
-        getFromDrupalAPI('wwa_talks_api', function (data) {
+        getTalksByEventID('2', function (data) {
             that.setState({ talks: data });
         });
     }
@@ -35,7 +35,7 @@ class Sermons extends Component {
         else {
             talks = _.map(this.state.talks, (talk) => {
                 return (
-                    <div className="talk-container col-xs-12" key={_.uniqueId()}>
+                    <div className="talk-container" key={_.uniqueId()}>
                         <div><a href={talk.audio} target="_blank" rel="noreferrer noopener">{talk.node_title ? decode(talk.node_title) : 'Untitled'}</a></div>
                         <div>{talk.passage ? decode(talk.passage) : 'Passage'}</div>
                         <span><AudioPlayer playlist={[{ url: talk.audio }]} controls={['playpause', 'spacer', 'progress']} /></span>
@@ -54,7 +54,7 @@ class Sermons extends Component {
                 <section className="container">
                     <div className="row col-md-12">
                         <p>
-                            In 2018 we look at what does Bible say about friendship? As Christians, how should we be thinking about friendship?<br />How do we respond biblically when friendship fails or friends hurt us?
+                            In 2018 we looked at what does Bible say about friendship? As Christians, how should we be thinking about friendship?<br />How do we respond biblically when friendship fails or friends hurt us?
                 </p><br />
 
                         <div className="desktop-only">
@@ -70,7 +70,7 @@ class Sermons extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="talks-container">
+                        <div className="talks-container col-xs-12">
                             {talks}
                         </div>
                     </div>

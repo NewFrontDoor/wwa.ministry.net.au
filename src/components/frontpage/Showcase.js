@@ -25,7 +25,7 @@ export default () => (
                     {/* Feature */}
                     <div className="col-sm-4 feature">
                         <div className="img_box">
-                            <a href="/2019Weekend">
+                            <a href="/2021Weekend">
                                 <img alt="" src={Weekend2019} />
                                 <span className="circle">
                                     <span className="plus">&#43;</span>
@@ -33,7 +33,7 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>2019 Weekend Away</h6>
+                            <h6>2021 Weekend Away</h6>
                             <p style={{ fontSize: "16px" }}>Learn more about this years topic, meet our speakers and check out the program.</p>
                         </div>
                     </div>
@@ -48,9 +48,8 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>Register</h6>
-                            <p style={{ fontSize: "16px" }}>Registrations for our 2019 Weekend Away have now closed. However we hope you can join us next year - <a href="/2020Weekend">find out more here</a></p>
-
+                            <h6>2019 Weekend Away</h6>
+                            <p style={{ fontSize: "16px" }}>Missed out on joining us last year - check out the talks <a href="/2019Weekend">here</a></p>
                         </div>
                     </div>
                 </div>

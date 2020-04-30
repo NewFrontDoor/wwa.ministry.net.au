@@ -153,11 +153,21 @@ a:hover > .fa-spotify {
   }
 }
 
-.talk-container {
-  margin-top: 60px;
+.talks-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-.talk-container > div {
+
+@media (max-width: 510px) {
+  .talks-container  {
+    grid-template-columns: 1fr;
+  }
+}
+
+.talk-container {
   line-height: 30px;
+  margin-top: 30px;
 }
 
 .page-banner {
