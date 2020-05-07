@@ -12,6 +12,7 @@ import WhatWeBelieve from './AboutUs/WhatWeBelieve';
 import OurMission from './AboutUs/OurMission';
 import PaypalReturn from '../registration/confirmations/PaypalReturn';
 import NotFound from './NotFound';
+import PastRetreats from './Retreats/PastRetreats';
 
 
 
@@ -32,7 +33,7 @@ export default () => (
             <Route exact path="/Committee" component={MeetTheCommittee} />
 
             <Route exact path="/paypal_confirmation/" component={PaypalReturn} />
-
+            <Route exact path="/PastWeekends" component={PastRetreats} />
             <Route path="/*" component={NotFound} />
         </Switch>
     </div>

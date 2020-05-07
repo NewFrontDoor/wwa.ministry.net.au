@@ -5,6 +5,7 @@ import { decode } from 'he'
 import { getTalksByEventID } from '../../../utils/fetchJSON';
 import AudioPlayer from 'react-responsive-audio-player';
 import '../../../assets/css/audioplayer.css'
+import { FaSpinner } from 'react-icons/fa'
 
 import Banner from '../../../assets/img/Retreat2018.png';
 import Caitlin from '../../../assets/img/Caitlin Orr.png';
@@ -30,7 +31,7 @@ class Sermons extends Component {
     render() {
         var talks;
         if (!this.state.talks) {
-            talks = <div>Loading, please wait.</div>;
+            talks = <FaSpinner />;
         }
         else {
             talks = _.map(this.state.talks, (talk) => {
@@ -52,14 +53,16 @@ class Sermons extends Component {
                 </div>
 
                 <section className="container">
+
                     <div className="row col-md-12">
+                        <div className="desktop-only">
+                            <img src={Caitlin} alt="" className="img img-responsive img-border-20" style={{ marginTop: "0px", float: "right", maxHeight: "180px" }} />
+                        </div>
                         <p>
                             In 2018 we looked at what does Bible say about friendship? As Christians, how should we be thinking about friendship?<br />How do we respond biblically when friendship fails or friends hurt us?
                 </p><br />
 
-                        <div className="desktop-only">
-                            <img src={Caitlin} alt="" className="img img-responsive img-border-20" style={{ marginTop: "-20px", float: "right", maxHeight: "180px" }} />
-                        </div>
+
 
 
                         <p style={{ marginTop: "0.5em" }}>

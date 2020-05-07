@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Banner from '../../../assets/img/WWA_2019-2.png';
 import Speaker from '../../../assets/img/Kathy Thurston.jpg'
+import { FaSpinner } from 'react-icons/fa'
 
 import _ from 'lodash'
 import { decode } from 'he'
@@ -29,7 +30,7 @@ class Retreat2019 extends Component {
   render() {
     var talks;
     if (this.state.talks === null) {
-      talks = <div>Loading, please wait.</div>;
+      talks = <FaSpinner />;
     }
     else if (this.state.talks.length === 0) {
       talks = <div><em>Talks to be added soon</em></div>
@@ -54,7 +55,7 @@ class Retreat2019 extends Component {
             <div className="text-center header-container" style={{ 'backgroundImage': `url('${Banner}')`, marginTop: "-18px", marginBottom: "30px" }}>
               <div className="header-info text-center">
                 <div>Loving God - Loving Others</div><br />
-                <div>6 - 8 September</div><br />
+                <div>6 - 8 September 2019</div><br />
                 <div>Camp Clayton, Tasmania</div>
               </div>
 
@@ -64,13 +65,13 @@ class Retreat2019 extends Component {
         <section className="container">
 
           <div className="row col-xs-12">
+            <div className="desktop-only">
+              <img src={Speaker} alt="" className="img img-responsive img-border-20" style={{ marginTop: "0px", float: "right", maxHeight: "180px" }} />
+            </div>
             <p>
               This year's topic was <em>Loving God - Loving Others</em> and had an opportunity to grapple with questions like: <em>How does God love us? How do we love people in our lives?</em> and <em>What is it that holds us back from loving others as God commands?</em>
             </p>
 
-            <div className="desktop-only">
-              <img src={Speaker} alt="" className="img img-responsive img-border-20" style={{ marginTop: "10px", float: "right", maxHeight: "180px" }} />
-            </div>
 
             <p style={{ marginTop: "4em" }}>
               We were delighted to welcome Kathy Thurston as our main speaker. Kathy and her husband Dave are based in Brisbane with their ministry work <a href="https://church2church.org.au/" target="_blank" rel="noopener noreferrer">Church2Church</a>, a role that involves ministering to clergy couples through mentoring and providing additional support through great resources and church consultancy.

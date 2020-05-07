@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Banner from '../../../assets/img/WWA_2019-2.png';
+import Banner from '../../../assets/img/green-background.jpg';
 import Speaker from '../../../assets/img/KylieEvans.jpg'
 
 class Retreat2020 extends Component {
@@ -32,7 +32,7 @@ class Retreat2020 extends Component {
                         </div>
 
                         <div className="desktop-only">
-                            <img src={Speaker} alt="" className="img img-responsive img-border-20" style={{ float: "right", maxHeight: "250px" }} />
+                            <img src={Speaker} alt="" className="img img-responsive img-border-20" style={{ marginTop: "-20px", float: "right", maxHeight: "250px" }} />
                         </div>
                         <p className="speaker-bio">
                             <p>Kylie has a love of learning, people and beauty. She is married to Peter with four wonderfully diverse children and is a counsellor through the <a href="http://www.dalbyhope.org/">Dalby Hope Centre.</a></p>

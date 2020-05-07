@@ -1,4 +1,6 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 export default () => (
     <div className="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -35,8 +37,9 @@ export default () => (
                         <ul className="dropdown-menu">
                             <li><a href="/missions">Missions</a></li>
                             <li><a href="/Worship">Worship</a></li>
-                            <li><a href="/2019Weekend">2019 Weekend</a></li>
-                            <li><a href="/2018Weekend">2018 Weekend</a></li>
+                            <li><Link smooth to="/PastWeekends#2019">2019 Weekend</Link></li>
+                            <li><Link smooth to="/PastWeekends#2018">2018 Weekend</Link></li>
+
                         </ul>
                     </li>
                     <li><a href="/Register">Register</a></li>

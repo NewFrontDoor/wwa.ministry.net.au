@@ -154,12 +154,14 @@ a:hover > .fa-spotify {
 }
 
 .talks-container {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+  min-height: 300px;
+  margin-bottom: 60px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 596px) {
   .talks-container  {
     grid-template-columns: 1fr;
   }
@@ -375,4 +377,9 @@ a:hover > .fa-spotify {
   .missions-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/*Offset for scrolling*/
+html {
+  scroll-padding-top: 60px; /* height of sticky header */
 }
