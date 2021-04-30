@@ -30,7 +30,7 @@ export default () => (
                             <li><a href="/Committee">Meet the Committee</a></li>
                         </ul>
                     </li>
-                    <li><a href="/2021Weekend">2021 Weekend</a></li>
+                    <li><a href="/2021Weekend">2022 Weekend</a></li>
                     <li className="dropdown">
                         <a href="#" //eslint-disable-line
                             className="dropdown-toggle" data-toggle="dropdown">Resources<b className="caret"></b></a>

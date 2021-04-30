@@ -342,7 +342,6 @@ a:hover > .fa-spotify {
 .header-info > div {
   margin-top: 0;
   font-family: bebas-neue, sans-serif;
-  text-transform: uppercase;
   color: #fff;
   text-shadow: 1px 1px #000;
 }
@@ -383,3 +382,11 @@ a:hover > .fa-spotify {
 html {
   scroll-padding-top: 60px; /* height of sticky header */
 }
+
+@font-face {
+  font-family: 'Seriffic';
+  src: url('/seriffic.otf');
+  font-weight: 100;
+}
+
+* {-webkit-font-smoothing: antialiased;}

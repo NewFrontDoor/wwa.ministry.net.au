@@ -33,8 +33,8 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>2021 Weekend Away</h6>
-                            <p style={{ fontSize: "16px" }}>Learn more about this years topic, meet our speakers and check out the program.</p>
+                            <h6>2022 Weekend Away</h6>
+                            <p style={{ fontSize: "16px" }}>Stay tuned for the date release on our website here or <a href="https://www.facebook.com/WWATasmania" rel="noopener noreferrer" target="_blank">Facebook</a> page</p>
                         </div>
                     </div>
                     {/* Feature */}

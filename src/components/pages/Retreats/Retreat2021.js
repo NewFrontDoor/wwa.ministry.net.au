@@ -1,7 +1,28 @@
 import React, { Component } from 'react';
-
-import Banner from '../../../assets/img/green-background.jpg';
+import styled from 'styled-components'
+import Banner from '../../../assets/img/wwa-banner-notext.jpg';
 import Speaker from '../../../assets/img/KylieEvans.jpg'
+
+const HeaderText = styled.div`
+font-family: bebas-neue, sans-serif;
+margin-top: 30px;
+color: #fff;
+text-shadow: 1px 1px #000;
+font-size: 18px;
+letter-spacing: 5px;
+line-height: 2.32;
+font-weight: 300;
+`;
+
+const HeaderLine = styled.div`
+font-family: 'Seriffic', serif !important;
+margin-bottom: 20px;
+color: #fff;
+text-shadow: 1px 1px #000;
+font-size: 2.5em;
+line-height: 2;
+font-weight: 200;
+`;
 
 class Retreat2020 extends Component {
     render() {
@@ -12,7 +33,8 @@ class Retreat2020 extends Component {
                         {/*<img alt="" className="img img-responsive slider-img" src={WWA2019} />*/}
                         <div className="header-info text-center">
                             <br />
-                            <div style={{ fontSize: "36px", lineHeight: "50px" }}>2021 Weekend Away</div><br />
+                            <HeaderText>NEXT WOMEN'S WEEKEND AWAY</HeaderText>
+                            <HeaderLine>September 2022</HeaderLine>
                         </div>
 
                     </div>
@@ -20,9 +42,12 @@ class Retreat2020 extends Component {
                 </section>
                 <section className="container">
                     <div className="col-md-12">
-                        <h3>Save the date!</h3>
-                        <h4>Women's Weekend Away 2021 will be from the 10th - 12th September at  <a href="https://www.google.com/maps/place/Camp+Clayton/@-41.160476,146.222076,3740m/data=!3m1!1e3!4m5!3m4!1s0x0:0x4acb99ea69ccacc0!8m2!3d-41.160476!4d146.222076">Camp Clayton</a>.</h4>
-                        <p>We’re looking forward to welcoming Kylie Evans to our Weekend Away! More details about the topic coming soon</p>
+                        <p>Due to the uncertainty that still continues, regarding large residential gatherings, the WWA committee has decided to <strong>postpone our 2021 weekend away, until 2022</strong>.</p><br />
+
+                        <p>The committee is excited to announce that Kylie Evans has agreed to be our keynote speaker next year, and we are keen to put together a weekend that will be a true comfort, encouragement and strengthening of faith for us all!</p><br />
+
+                        <p>Stay tuned for the date release for our next Women's Weekend Away in September 2022, here on our website or <a href="https://www.facebook.com/WWATasmania" rel="noopener noreferrer" target="_blank">Facebook</a> page.</p>
+
                         <br />
                         <h3>Meet the Speaker</h3>
 

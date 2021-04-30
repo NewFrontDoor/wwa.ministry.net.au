@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components'
-import sliderimg from '../../assets/img/green-background.jpg'
+import sliderimg from '../../assets/img/wwa-banner-notext.jpg'
 
 const HeaderText = styled.div`
-font-family: 'Alike', serif !important;
+font-family: bebas-neue, sans-serif;
 margin-top: 30px;
+color: #fff;
+text-shadow: 1px 1px #000;
+font-size: 18px;
+letter-spacing: 5px;
+line-height: 2.32;
+font-weight: 300;
+`;
+
+const HeaderLine = styled.div`
+font-family: 'Seriffic', serif;
 margin-bottom: 20px;
 color: #fff;
 text-shadow: 1px 1px #000;
-font-size: 25px;
-line-height: 2.32;
-font-weight: 400;
+font-size: 3vw;
+letter-spacing: 3px;
+line-height: 1.5;
+font-weight: 200;
 `;
 
 const HeaderContainer = styled.div`
@@ -19,7 +30,7 @@ min-height: 360px;
 background-repeat: no-repeat;
 background-position: center;
 background-size: 100% 100%;
-`
+`;
 
 const HeaderInfo = styled.div`
 font-size: 26px;
@@ -39,13 +50,11 @@ export default () => (
                         <HeaderContainer style={{ 'backgroundImage': `url('${sliderimg}')`, marginTop: "80px" }}>
                                 {/*<img alt="" className="img img-responsive slider-img" src={sliderimg} />*/}
                                 <HeaderInfo>
-                                        <HeaderText>Due to COVID-19 we've had to postpone our 2020 weekend together.<br />
-                                        However we'd love you to SAVE THE DATE  for next year!</HeaderText><br />
-                                        <HeaderText>10th - 12th September 2021<br />
-                                        CAMP CLAYTON, TASMANIA</HeaderText>
+                                        <HeaderText>NEXT WOMEN'S WEEKEND AWAY</HeaderText>
+                                        <HeaderLine>September 2022</HeaderLine><br /><br /><br />
                                 </HeaderInfo>
                         </HeaderContainer>
                 </div>
         </section>
 
-)       
+)
