@@ -49,7 +49,7 @@ export default () => (
                         </div>
                         <div className="text">
                             <h6>2019 Weekend Away</h6>
-                            <p style={{ fontSize: "16px" }}>Missed out on joining us last year - check out the talks <a href="/2019Weekend">here</a></p>
+                            <p style={{ fontSize: "16px" }}>Missed out on joining us last time - check out the talks <a href="/2019Weekend">here</a></p>
                         </div>
                     </div>
                 </div>
