@@ -14,7 +14,7 @@
     "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
