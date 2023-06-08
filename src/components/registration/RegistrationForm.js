@@ -371,8 +371,8 @@ class RegistrationForm extends Component {
 					<p>
 						8-10th September 2023
 						<br />
-						<a href="https://goo.gl/maps/srXi3etamE7zDfgPA" rel="noreferrer noopener" target="_blank">
-							Camp Clayton, Ulverstone
+						<a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
+							Tamar Valley Resort, Grindelwald
 						</a>
 					</p>
 
@@ -820,8 +820,8 @@ class RegistrationForm extends Component {
 					<p>
 						8-10th September 2023
 						<br />
-						<a href="https://goo.gl/maps/srXi3etamE7zDfgPA" rel="noreferrer noopener" target="_blank">
-							Camp Clayton, Ulverstone
+            <a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
+							Tamar Valley Resort, Grindelwald
 						</a>
 					</p>
 
