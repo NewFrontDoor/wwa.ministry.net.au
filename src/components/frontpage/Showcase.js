@@ -33,8 +33,8 @@ export default () => (
                             </a>
                         </div>
                         <div className="text">
-                            <h6>2022 Weekend Away</h6>
-                            <p style={{ fontSize: "16px" }}>Stay tuned for the date release on our website here or <a href="https://www.facebook.com/WWATasmania" rel="noopener noreferrer" target="_blank">Facebook</a> page</p>
+                            <h6>2023 Weekend Away</h6>
+                            <p style={{ fontSize: "16px" }}>8th - 10th September at Tamar Valley Resort, Launceston. <a href="/Register">Register Now</a> and stay up to date on our <a href="https://www.facebook.com/WWATasmania" rel="noopener noreferrer" target="_blank">Facebook</a> page</p>
                         </div>
                     </div>
                     {/* Feature */}
