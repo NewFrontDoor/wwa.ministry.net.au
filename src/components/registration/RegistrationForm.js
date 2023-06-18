@@ -8,18 +8,17 @@ import ChequeDDConfirmation from "./confirmations/ChequeDD";
 
 import { postToWebform } from "./postToAPI.js";
 
-const webformID = "8e070048-9aaf-4371-a0de-35bb5c3d28e6"
+const webformID = "8e070048-9aaf-4371-a0de-35bb5c3d28e6";
 const fullWeekendEarlyPrice = 150;
-const fullWeekendPrice = 160;
+const fullWeekendPrice = 150;
 const fullNonResidential = 100;
 const fullYoungWomenCost = 130;
 // const dayPrice = 20;
 // const breakfastCost = 9;
 // const lunchCost = 16;
 // const dinnerCost = 19;
-// const registrationCutoff = new Date("2023-09-08 00:00");
-//const registrationsOpen = registrationCutoff.getTime() > Date.now();
-const registrationsOpen = true;
+const registrationCutoff = new Date("2023-08-14 00:00");
+const registrationsOpen = registrationCutoff.getTime() > Date.now();
 //const earlyBirdCutoff = new Date('2019-07-13');
 //const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
 const earlyBirdValid = false;
@@ -59,7 +58,9 @@ class RegistrationForm extends Component {
 			weekendDinnerAttendance: "yes",
 			donation: "no",
 			donationAmount: 0,
-			letUsKnow: ""
+			letUsKnow: "",
+			emergencyContactName: "",
+			emergencyContactPhone: ""
 		};
 
 		this.resetRegistrationForm = this.resetRegistrationForm.bind(this);
@@ -98,7 +99,9 @@ class RegistrationForm extends Component {
 			weekendDinnerAttendance: "yes",
 			donation: "no",
 			donationAmount: 0,
-			letUsKnow: ""
+			letUsKnow: "",
+			emergencyContactName: "",
+			emergencyContactPhone: ""
 		});
 	}
 
@@ -350,6 +353,20 @@ class RegistrationForm extends Component {
 			form.append("submission[data][20][values][0]", this.state.donationAmount);
 			form.append("submission[data][22][values][0]", this.state.letUsKnow);
 
+			form.append(
+				"submission[data][24][values][0]",
+				escape(this.state.emergencyContactName).replace(
+					/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D])/g,
+					""
+				)
+			);
+			form.append(
+				"submission[data][25][values][0]",
+				escape(this.state.emergencyContactPhone).replace(
+					/([\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D])/g,
+					""
+				)
+			);
 			var that = this;
 			postToWebform(form, function(data) {
 				that.setState({ submissionID: data.sid });
@@ -384,7 +401,7 @@ class RegistrationForm extends Component {
 					) : (
 						""
 					)}
-					<p>Registrations Close 8th September 2023</p>
+					<p>Registrations Close 13th August 2023</p>
 					<em style={{ fontWeight: "normal" }}>
 						Unfortunately children cannot be provided for, however mothers with babies are welcome.
 					</em>
@@ -505,6 +522,20 @@ class RegistrationForm extends Component {
 						/>
 						<br />
 						<label>
+							<strong>Church</strong>{" "}
+						</label>
+						<br />
+						<input
+							className="form-control form-text required"
+							type="text"
+							name="church"
+							size="60"
+							maxLength="128"
+							onChange={this.handleChange.bind(this)}
+							value={this.state.church}
+						/>
+						<br />
+						<label>
 							<strong>Age</strong>
 						</label>
 						{requiredField}
@@ -520,6 +551,35 @@ class RegistrationForm extends Component {
 							<option value="65to74">65-74</option>
 							<option value="over75">75+</option>
 						</select>
+						<br />
+						<br />
+						<label>
+							<strong>Emergency Contact Name</strong>{" "}
+						</label>
+						<br />
+						<input
+							className="form-control form-text required"
+							type="text"
+							name="emergencyContactName"
+							size="60"
+							maxLength="128"
+							onChange={this.handleChange.bind(this)}
+							value={this.state.emergencyContactName}
+						/>
+						<br />
+						<label>
+							<strong>Emergency Contact Phone Number</strong>{" "}
+						</label>
+						<br />
+						<input
+							className="form-control form-text required"
+							type="text"
+							name="emergencyContactPhone"
+							size="60"
+							maxLength="128"
+							onChange={this.handleChange.bind(this)}
+							value={this.state.emergencyContactPhone}
+						/>
 						<h3 style={{ color: "#000" }}>Registration Information</h3>
 						<label>
 							<strong>Registration Type</strong>
@@ -532,7 +592,7 @@ class RegistrationForm extends Component {
 							) : (
 								<option value="full"> Residential - ${currentFullCost}</option>
 							)}
-							<option value="youngWomen">Young Women (13-18) - ${fullYoungWomenCost}</option>
+							<option value="youngWomen">Concession / Student - ${fullYoungWomenCost}</option>
 							<option value="nonResidential">Non-Residential - ${fullNonResidential}</option>
 						</select>
 						<br />
@@ -739,30 +799,19 @@ class RegistrationForm extends Component {
 						{requiredField}
 						<br />
 						<select name="paymentType" value={this.state.paymentType} onChange={this.handleChange.bind(this)}>
-							<option value="paypal">Paypal or Credit Card</option>
-							<option value="cheque">Cheque</option>
+							{/* <option value="paypal">Paypal or Credit Card</option>
+							<option value="cheque">Cheque</option> */}
 							<option value="directDeposit">Direct Deposit</option>
 						</select>
 						<br />
 						<em>
-							If you need to discuss a payment plan please contact Libby Dilger (
-							<a href="mailto:admin@wwa.ministry.net.au">admin@wwa.ministry.net.au</a>).
+							If you need to discuss a payment plan please contact Ngaire McCrindle (
+							<a href="mailto:n.mccrindle@gmail.com">n.mccrindle@gmail.com</a>).
 						</em>{" "}
 						<br />
 						<br />
-						<label>Church </label>
-						<br />
-						<input
-							className="form-control form-text required"
-							type="text"
-							name="church"
-							size="60"
-							maxLength="128"
-							onChange={this.handleChange.bind(this)}
-							value={this.state.church}
-						/>
 						<label>
-							<strong>Food Allergies and Dietary Needs</strong> {requiredField}{" "}
+							<strong>Food Allergies</strong>
 						</label>
 						<br />
 						<textarea
@@ -820,20 +869,20 @@ class RegistrationForm extends Component {
 					<p>
 						8-10th September 2023
 						<br />
-            <a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
+						<a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
 							Tamar Valley Resort, Grindelwald
 						</a>
 					</p>
 
 					{earlyBirdValid ? (
 						<p>
-							Early Bird Closes 12th July 2019
+							Early Bird Closes 12th July 2023
 							<br />
 						</p>
 					) : (
 						""
 					)}
-					<p>Registrations Close 9th August 2019</p>
+					<p>Registrations Close 13th August 2023</p>
 					<br />
 					<h3 style={{ color: "#000" }}>Registrations for this event have now closed.</h3>
 					<br />
@@ -881,21 +930,9 @@ class RegistrationForm extends Component {
 		}
 
 		return (
-			<section>
-				<div className="container">
-					<p>
-						If you are keen for further encouragement this year, feel free to save the date for the national
-						Presbyterian Women online conference on 18 September 2021. Featuring international speaker Bronwyn Lea,
-						author of Beyond Awkward Side Hugs, and Australian podcast host, Devi Abraham of “Where Do We Go From
-						Here?”. Check their website for more details, as they're released at{" "}
-						<a href="https://www.wmpca.org.au">www.wmpca.org.au</a>
-					</p>
-				</div>
-				<br />
-				<section className="container event-details">
-					{formSubmitted}
-					{registrationForm}
-				</section>
+			<section className="container event-details">
+				{formSubmitted}
+				{registrationForm}
 			</section>
 		);
 	}
