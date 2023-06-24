@@ -21,7 +21,7 @@ const registrationCutoff = new Date("2023-08-14 00:00");
 const registrationsOpen = registrationCutoff.getTime() > Date.now();
 //const earlyBirdCutoff = new Date('2019-07-13');
 //const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
-const earlyBirdValid = false;
+const earlyBirdValid = true;
 const currentFullCost = earlyBirdValid ? fullWeekendEarlyPrice : fullWeekendPrice;
 
 class RegistrationForm extends Component {
@@ -44,7 +44,7 @@ class RegistrationForm extends Component {
 			formValid: false,
 			formSubmitted: false,
 			registrationType: "full",
-			paymentType: "paypal",
+			paymentType: "directDeposit",
 			totalCost: 0,
 			friday: false,
 			fridayDinner: false,
@@ -85,7 +85,7 @@ class RegistrationForm extends Component {
 			formValid: false,
 			formSubmitted: false,
 			registrationType: "full",
-			paymentType: "paypal",
+			paymentType: "directDeposit",
 			totalCost: 0,
 			friday: false,
 			fridayDinner: false,
@@ -111,7 +111,6 @@ class RegistrationForm extends Component {
 		var change = {};
 		change[e.target.name] = value;
 		this.setState(change);
-		console.log(this.state);
 	}
 
 	handleSubmit(e) {
@@ -250,22 +249,22 @@ class RegistrationForm extends Component {
 
 			if (this.state.registrationType === "full" || this.state.registrationType === "earlyBird") {
 				form.append("submission[data][10][values][0]", escape(this.state.weekendDinnerAttendance));
-				form.append("submission[data][11][values][0]", "friday");
+				// form.append("submission[data][11][values][0]", "friday");
 				form.append("submission[data][11][values][1]", "saturday");
 				form.append("submission[data][11][values][2]", "sunday");
 
 				if (this.state.weekendDinnerAttendance === "yes") {
 					form.append("submission[data][12][values][0]", "fridayDinner");
-					form.append("submission[data][12][values][1]", "saturdayBreakfast");
+					// form.append("submission[data][12][values][1]", "saturdayBreakfast");
 					form.append("submission[data][12][values][2]", "saturdayLunch");
 					form.append("submission[data][12][values][3]", "saturdayDinner");
-					form.append("submission[data][12][values][4]", "sundayBreakfast");
+					// form.append("submission[data][12][values][4]", "sundayBreakfast");
 					form.append("submission[data][12][values][5]", "sundayLunch");
 				} else {
-					form.append("submission[data][12][values][0]", "saturdayBreakfast");
+					// form.append("submission[data][12][values][0]", "saturdayBreakfast");
 					form.append("submission[data][12][values][1]", "saturdayLunch");
 					form.append("submission[data][12][values][2]", "saturdayDinner");
-					form.append("submission[data][12][values][3]", "sundayBreakfast");
+					// form.append("submission[data][12][values][3]", "sundayBreakfast");
 					form.append("submission[data][12][values][4]", "sundayLunch");
 				}
 			} else {
@@ -273,11 +272,11 @@ class RegistrationForm extends Component {
 					form.append("submission[data][11][values][0]", "friday");
 					form.append("submission[data][11][values][1]", "saturday");
 					form.append("submission[data][11][values][2]", "sunday");
-					form.append("submission[data][12][values][0]", "fridayDinner");
-					form.append("submission[data][12][values][1]", "saturdayBreakfast");
+					// form.append("submission[data][12][values][0]", "fridayDinner");
+					// form.append("submission[data][12][values][1]", "saturdayBreakfast");
 					form.append("submission[data][12][values][2]", "saturdayLunch");
 					form.append("submission[data][12][values][3]", "saturdayDinner");
-					form.append("submission[data][12][values][4]", "sundayBreakfast");
+					// form.append("submission[data][12][values][4]", "sundayBreakfast");
 					form.append("submission[data][12][values][5]", "sundayLunch");
 				} else {
 					let i = 0;
@@ -295,17 +294,17 @@ class RegistrationForm extends Component {
 					}
 
 					let j = 0;
-					if (this.state.fridayDinner) {
-						form.append("submission[data][12][values][" + j + "]", "fridayDinner");
-						form.append("submission[data][10][values][0]", "yes");
-						j++;
-					} else {
-						form.append("submission[data][10][values][0]", "no");
-					}
-					if (this.state.saturdayBreakfast) {
-						form.append("submission[data][12][values][" + j + "]", "saturdayBreakfast");
-						j++;
-					}
+					// if (this.state.fridayDinner) {
+					// 	form.append("submission[data][12][values][" + j + "]", "fridayDinner");
+					// 	form.append("submission[data][10][values][0]", "yes");
+					// 	j++;
+					// } else {
+					// 	form.append("submission[data][10][values][0]", "no");
+					// }
+					// if (this.state.saturdayBreakfast) {
+					// 	form.append("submission[data][12][values][" + j + "]", "saturdayBreakfast");
+					// 	j++;
+					// }
 					if (this.state.saturdayLunch) {
 						form.append("submission[data][12][values][" + j + "]", "saturdayLunch");
 						j++;
@@ -314,10 +313,10 @@ class RegistrationForm extends Component {
 						form.append("submission[data][12][values][" + j + "]", "saturdayDinner");
 						j++;
 					}
-					if (this.state.sundayBreakfast) {
-						form.append("submission[data][12][values][" + j + "]", "sundayBreakfast");
-						j++;
-					}
+					// if (this.state.sundayBreakfast) {
+					// 	form.append("submission[data][12][values][" + j + "]", "sundayBreakfast");
+					// 	j++;
+					// }
 					if (this.state.sundayLunch) {
 						form.append("submission[data][12][values][" + j + "]", "sundayLunch");
 						j++;
@@ -393,14 +392,8 @@ class RegistrationForm extends Component {
 						</a>
 					</p>
 
-					{earlyBirdValid ? (
-						<p>
-							Early Bird Closes 12th July 2019
-							<br />
-						</p>
-					) : (
-						""
-					)}
+					{earlyBirdValid ? <p>{/* Early Bird Closes 12th July 2019
+							<br /> */}</p> : ""}
 					<p>Registrations Close 13th August 2023</p>
 					<em style={{ fontWeight: "normal" }}>
 						Unfortunately children cannot be provided for, however mothers with babies are welcome.
@@ -542,8 +535,10 @@ class RegistrationForm extends Component {
 						<br />
 						<select name="age" value={this.state.age} onChange={this.handleChange.bind(this)}>
 							<option value="">----</option>
-							<option value="13to18">13-18</option>
-							<option value="18to24">18-24</option>
+							{/* <option value="13to18">13-18</option>
+							<option value="18to24">18-24</option> */}
+							<option value="16to18">16-18</option>
+							<option value="19to24">19-24</option>
 							<option value="25to34">25-34</option>
 							<option value="35to44">35-44</option>
 							<option value="45to54">45-54</option>
@@ -588,18 +583,18 @@ class RegistrationForm extends Component {
 						<br />
 						<select name="registrationType" value={this.state.registrationType} onChange={this.handleChange.bind(this)}>
 							{earlyBirdValid ? (
-								<option value="full">(Early Bird) Residential - ${currentFullCost}</option>
+								<option value="full">Residential (early bird) - ${currentFullCost}</option>
 							) : (
 								<option value="full"> Residential - ${currentFullCost}</option>
 							)}
 							<option value="youngWomen">Concession / Student - ${fullYoungWomenCost}</option>
 							<option value="nonResidential">Non-Residential - ${fullNonResidential}</option>
 						</select>
-						<br />
-						<br />
+						{/* <br />
+						<br /> */}
 						{this.state.registrationType === "full" ? (
 							<section>
-								<strong>Will you be attending the Friday night dinner? </strong>
+								{/* <strong>Will you be attending the Friday night dinner? </strong>
 								<br />
 								<label> Yes &nbsp;</label>
 								<input
@@ -618,7 +613,7 @@ class RegistrationForm extends Component {
 									onChange={this.handleChange.bind(this)}
 									checked={this.state.weekendDinnerAttendance === "no"}
 								/>
-								<br />
+								<br /> */}
 							</section>
 						) : (
 							<section>
@@ -657,7 +652,7 @@ class RegistrationForm extends Component {
 								<br />
 								<strong>Please select which meals will be required:</strong>
 								<br />
-								<label>I require all meals</label>
+								<label>I require all meals (breakfast excluded)</label>
 								<br />
 								<label> Yes &nbsp;</label>
 								<input
@@ -684,7 +679,7 @@ class RegistrationForm extends Component {
 										<div className="row">
 											<div className="col-sm-6 col-xs-12">
 												<div className="col-sm-6">
-													<label>
+													{/* <label>
 														<input
 															type="checkbox"
 															name="fridayDinner"
@@ -693,8 +688,8 @@ class RegistrationForm extends Component {
 														/>
 														&nbsp;Friday Dinner&nbsp;
 													</label>
-													<br />
-													<label>
+													<br /> */}
+													{/* <label>
 														<input
 															type="checkbox"
 															name="saturdayBreakfast"
@@ -703,7 +698,7 @@ class RegistrationForm extends Component {
 														/>
 														&nbsp;Saturday Breakfast&nbsp;
 													</label>
-													<br />
+													<br /> */}
 													<label>
 														<input
 															type="checkbox"
@@ -714,9 +709,6 @@ class RegistrationForm extends Component {
 														&nbsp;Saturday Lunch &nbsp;
 													</label>
 													<br />
-												</div>
-
-												<div className="col-sm-6">
 													<label>
 														<input
 															type="checkbox"
@@ -727,7 +719,10 @@ class RegistrationForm extends Component {
 														&nbsp;Saturday Dinner &nbsp;
 													</label>
 													<br />
-													<label>
+												</div>
+
+												<div className="col-sm-6">
+													{/* <label>
 														<input
 															type="checkbox"
 															name="sundayBreakfast"
@@ -736,7 +731,7 @@ class RegistrationForm extends Component {
 														/>
 														&nbsp;Sunday Breakfast &nbsp;
 													</label>
-													<br />
+													<br /> */}
 													<label>
 														<input
 															type="checkbox"
@@ -796,18 +791,22 @@ class RegistrationForm extends Component {
 						<label>
 							<strong>Payment Method</strong>
 						</label>
-						{requiredField}
+						{/* {requiredField} */}
 						<br />
-						<select name="paymentType" value={this.state.paymentType} onChange={this.handleChange.bind(this)}>
-							{/* <option value="paypal">Paypal or Credit Card</option>
-							<option value="cheque">Cheque</option> */}
+						<br />
+						{/* <select name="paymentType" value={this.state.paymentType} onChange={this.handleChange.bind(this)}>
+							<option value="paypal">Paypal or Credit Card</option>
+							<option value="cheque">Cheque</option>
 							<option value="directDeposit">Direct Deposit</option>
-						</select>
+						</select> */}
+						<span>Payments for this event are only possible by direct deposit.</span>
+						<br />
 						<br />
 						<em>
 							If you need to discuss a payment plan please contact Ngaire McCrindle (
 							<a href="mailto:n.mccrindle@gmail.com">n.mccrindle@gmail.com</a>).
 						</em>{" "}
+						<br />
 						<br />
 						<br />
 						<label>
@@ -874,14 +873,8 @@ class RegistrationForm extends Component {
 						</a>
 					</p>
 
-					{earlyBirdValid ? (
-						<p>
-							Early Bird Closes 12th July 2023
-							<br />
-						</p>
-					) : (
-						""
-					)}
+					{earlyBirdValid ? <p>{/* Early Bird Closes 12th July 2023
+							<br /> */}</p> : ""}
 					<p>Registrations Close 13th August 2023</p>
 					<br />
 					<h3 style={{ color: "#000" }}>Registrations for this event have now closed.</h3>
