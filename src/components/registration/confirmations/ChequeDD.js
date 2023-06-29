@@ -14,6 +14,7 @@ class ChequeDD extends Component {
 			<section>
 				<p>
 					Thank you for registering for the Women&apos;s Weekend Away. <br />
+					You'll receive an email with further details in the lead up to the event. <br />
 					<br />
 					To complete your registration, please pay the full amount of <strong>${this.state.totalCost}</strong> to the
 					following account:

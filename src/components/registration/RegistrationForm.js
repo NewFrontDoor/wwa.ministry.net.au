@@ -254,7 +254,7 @@ class RegistrationForm extends Component {
 				form.append("submission[data][11][values][2]", "sunday");
 
 				if (this.state.weekendDinnerAttendance === "yes") {
-					form.append("submission[data][12][values][0]", "fridayDinner");
+					//form.append("submission[data][12][values][0]", "fridayDinner");
 					// form.append("submission[data][12][values][1]", "saturdayBreakfast");
 					form.append("submission[data][12][values][2]", "saturdayLunch");
 					form.append("submission[data][12][values][3]", "saturdayDinner");
@@ -269,7 +269,7 @@ class RegistrationForm extends Component {
 				}
 			} else {
 				if (this.state.allMealsRequired === "yes") {
-					form.append("submission[data][11][values][0]", "friday");
+					//form.append("submission[data][11][values][0]", "friday");
 					form.append("submission[data][11][values][1]", "saturday");
 					form.append("submission[data][11][values][2]", "sunday");
 					// form.append("submission[data][12][values][0]", "fridayDinner");

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import sliderimg from "../../../assets/img/WWF2023_facebook-upscale.jpeg";
+import Speaker from "../../../assets/img/Carmelina.jpeg";
 
 class Retreat2020 extends Component {
 	render() {
@@ -12,12 +13,8 @@ class Retreat2020 extends Component {
 				</section>
 				<section className="container" style={{ marginTop: "30px" }}>
 					<div className="col-md-12">
-						<p>More details coming soon.</p>
+						<h3>Meet the Speaker - Carmelina Read</h3>
 
-						<br />
-						{/* <h3>Meet the Speaker</h3>
-
-						<h4>Kylie Evans</h4>
 						<div className="text-center mobile-only">
 							<img
 								src={Speaker}
@@ -35,19 +32,35 @@ class Retreat2020 extends Component {
 								style={{ marginTop: "-20px", float: "right", maxHeight: "250px" }}
 							/>
 						</div>
-						<p className="speaker-bio">
+						<p className="retreat-text">
 							<p>
-								Kylie has a love of learning, people and beauty. She is married to Peter with four wonderfully diverse
-								children and is a counsellor through the <a href="http://www.dalbyhope.org/">Dalby Hope Centre.</a>
+								Carmelina and her husband Jeff have been in ministry together at Chatswood Presbyterian Church, where
+								Jeff is the senior minister, for almost 25 years. They have 3 adult boys, a 16 year old daughter and a
+								lovely new daughter in law. Carmi is the Dean of Women at Christ College, the Presbyterian Theological
+								College in Sydney where she runs the Ministry Training for Women course and heads up the pastoral care
+								of female students and candidates wives. In February this year, Carmi started a new role as a police
+								chaplain at her local station. On a day off, Carmi loves going to the beach, reading crime novels set in
+								Italy and going on a walk with her 2 dogs. At church, one of the highlights of her week is the women’s
+								Bible study ministry on Wednesday mornings where she loves to see God’s word bring women into the
+								kingdom and grow them in their faith in Christ.
 							</p>
+						</p>
+
+						<h3>
+							This years theme is <em>Waiting for the Day</em>
+						</h3>
+
+						<p className="retreat-text">
 							<p>
-								Kylie discovered after being a Christian for thirty years, that the God she thought she knew was not the
-								God of the Bible, that she only had half the story. She discovered that she had created a god through
-								her life experiences that formed a filter, limiting her relationship with God in understanding his
-								character and attributes, a god in her own image.
+								The book of 2 Thessalonians is just as relevant today as it was when it was written in the first
+								century. The apostle Paul teaches us how we should live and work as we wait for Jesus to come back.
 							</p>
-							<p>Kylie enjoys vegetable gardening in cool weather and finding little ways to live a bit differently.</p>
-						</p> */}
+
+							<p>
+								Join us for a weekend of encouragement and challenge as we learn more about what will happen when Jesus
+								comes back and the practical impact this has on our day-to-day life.
+							</p>
+						</p>
 					</div>
 				</section>
 			</section>
