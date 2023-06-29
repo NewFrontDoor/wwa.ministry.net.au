@@ -145,9 +145,9 @@ class RegistrationForm extends Component {
 		if (validator.isEmpty(this.state.postcode)) {
 			errorMessage += "Please enter your postcode.\n";
 		}
-		if (validator.isEmpty(this.state.dietary)) {
-			errorMessage += "Please enter whether or not you have any allergies or dietary concerns.\n";
-		}
+		// if (validator.isEmpty(this.state.dietary)) {
+		// 	errorMessage += "Please enter whether or not you have any allergies or dietary concerns.\n";
+		// }
 		if (validator.isEmpty(this.state.letUsKnow)) {
 			errorMessage +=
 				"Please let us know some of your favourite hymns, if you have a roommate request or if you need help with transport\n";
@@ -249,35 +249,35 @@ class RegistrationForm extends Component {
 
 			if (this.state.registrationType === "full" || this.state.registrationType === "earlyBird") {
 				form.append("submission[data][10][values][0]", escape(this.state.weekendDinnerAttendance));
-				// form.append("submission[data][11][values][0]", "friday");
+				form.append("submission[data][11][values][0]", "friday");
 				form.append("submission[data][11][values][1]", "saturday");
 				form.append("submission[data][11][values][2]", "sunday");
 
 				if (this.state.weekendDinnerAttendance === "yes") {
 					//form.append("submission[data][12][values][0]", "fridayDinner");
 					// form.append("submission[data][12][values][1]", "saturdayBreakfast");
-					form.append("submission[data][12][values][2]", "saturdayLunch");
-					form.append("submission[data][12][values][3]", "saturdayDinner");
+					form.append("submission[data][12][values][0]", "saturdayLunch");
+					form.append("submission[data][12][values][1]", "saturdayDinner");
 					// form.append("submission[data][12][values][4]", "sundayBreakfast");
-					form.append("submission[data][12][values][5]", "sundayLunch");
+					form.append("submission[data][12][values][2]", "sundayLunch");
 				} else {
 					// form.append("submission[data][12][values][0]", "saturdayBreakfast");
-					form.append("submission[data][12][values][1]", "saturdayLunch");
-					form.append("submission[data][12][values][2]", "saturdayDinner");
+					form.append("submission[data][12][values][0]", "saturdayLunch");
+					form.append("submission[data][12][values][1]", "saturdayDinner");
 					// form.append("submission[data][12][values][3]", "sundayBreakfast");
-					form.append("submission[data][12][values][4]", "sundayLunch");
+					form.append("submission[data][12][values][2]", "sundayLunch");
 				}
 			} else {
 				if (this.state.allMealsRequired === "yes") {
-					//form.append("submission[data][11][values][0]", "friday");
+					form.append("submission[data][11][values][0]", "friday");
 					form.append("submission[data][11][values][1]", "saturday");
 					form.append("submission[data][11][values][2]", "sunday");
 					// form.append("submission[data][12][values][0]", "fridayDinner");
 					// form.append("submission[data][12][values][1]", "saturdayBreakfast");
-					form.append("submission[data][12][values][2]", "saturdayLunch");
-					form.append("submission[data][12][values][3]", "saturdayDinner");
+					form.append("submission[data][12][values][0]", "saturdayLunch");
+					form.append("submission[data][12][values][1]", "saturdayDinner");
 					// form.append("submission[data][12][values][4]", "sundayBreakfast");
-					form.append("submission[data][12][values][5]", "sundayLunch");
+					form.append("submission[data][12][values][2]", "sundayLunch");
 				} else {
 					let i = 0;
 					if (this.state.friday) {

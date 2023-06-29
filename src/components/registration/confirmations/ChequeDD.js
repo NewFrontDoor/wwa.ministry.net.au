@@ -12,7 +12,7 @@ class ChequeDD extends Component {
 	render() {
 		return (
 			<section>
-				<p>
+				<p style="padding-top: 20px">
 					Thank you for registering for the Women&apos;s Weekend Away. <br />
 					You'll receive an email with further details in the lead up to the event. <br />
 					<br />
