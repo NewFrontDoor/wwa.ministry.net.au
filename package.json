@@ -1,85 +1,88 @@
 {
-  "name": "wwa.ministry.net.au",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "es6-promise": "^4.2.6",
-    "isomorphic-fetch": "^2.2.1",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-icons": "^3.10.0",
-    "react-responsive-audio-player": "^1.5.0",
-    "react-router-dom": "^5.0.0",
-    "react-router-hash-link": "^1.2.2",
-    "react-scripts": "3.4.1",
-    "styled-components": "^5.1.0",
-    "validator": "^10.11.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "prettier": "^1.18.2",
-    "xo": "^0.25.3"
-  },
-  "xo": {
-    "extends": [
-      "xo-react",
-      "plugin:jest/recommended"
-    ],
-    "parser": "babel-eslint",
-    "prettier": true,
-    "space": true,
-    "plugins": [
-      "emotion",
-      "jest"
-    ],
-    "rules": {
-      "emotion/jsx-import": "error",
-      "emotion/no-vanilla": "error",
-      "emotion/import-from-emotion": "error",
-      "emotion/styled-import": "error"
-    },
-    "overrides": [
-      {
-        "files": "**/__tests__/**/*.js",
-        "rules": {
-          "import/no-unassigned-import": [
-            "error",
-            {
-              "allow": [
-                "@testing-library/jest-dom/extend-expect"
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "eslint": {
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    }
-  }
+	"name": "wwa.ministry.net.au",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"es6-promise": "^4.2.6",
+		"isomorphic-fetch": "^2.2.1",
+		"react": "^16.8.6",
+		"react-bootstrap": "^1.0.0-beta.8",
+		"react-dom": "^16.8.6",
+		"react-icons": "^3.10.0",
+		"react-responsive-audio-player": "^1.5.0",
+		"react-router-dom": "^5.0.0",
+		"react-router-hash-link": "^1.2.2",
+		"react-scripts": "3.4.1",
+		"styled-components": "^5.1.0",
+		"validator": "^10.11.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"prettier": "^1.18.2",
+		"xo": "^0.25.3"
+	},
+	"xo": {
+		"extends": [
+			"xo-react",
+			"plugin:jest/recommended"
+		],
+		"parser": "babel-eslint",
+		"prettier": true,
+		"space": true,
+		"plugins": [
+			"emotion",
+			"jest"
+		],
+		"rules": {
+			"emotion/jsx-import": "error",
+			"emotion/no-vanilla": "error",
+			"emotion/import-from-emotion": "error",
+			"emotion/styled-import": "error"
+		},
+		"overrides": [
+			{
+				"files": "**/__tests__/**/*.js",
+				"rules": {
+					"import/no-unassigned-import": [
+						"error",
+						{
+							"allow": [
+								"@testing-library/jest-dom/extend-expect"
+							]
+						}
+					]
+				}
+			}
+		]
+	},
+	"eslint": {
+		"settings": {
+			"react": {
+				"version": "detect"
+			}
+		}
+	},
+	"volta": {
+		"node": "16.20.1"
+	}
 }

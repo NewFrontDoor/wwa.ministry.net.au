@@ -17,7 +17,7 @@ const fullYoungWomenCost = 130;
 // const breakfastCost = 9;
 // const lunchCost = 16;
 // const dinnerCost = 19;
-const registrationCutoff = new Date("2023-08-14 00:00");
+//const registrationCutoff = new Date("2023-08-14 00:00");
 //const registrationsOpen = registrationCutoff.getTime() > Date.now();
 const registrationsOpen = true;
 //const earlyBirdCutoff = new Date('2019-07-13');
@@ -185,7 +185,6 @@ class RegistrationForm extends Component {
 
 			this.setState({ totalCost: totalCost });
 			this.setState({ formValid: true });
-			console.log(this.state);
 			/*handle posting to drupal and show success message*/
 			var form = new FormData();
 			form.append("webform", webformID);
