@@ -13,6 +13,7 @@ const fullWeekendEarlyPrice = 150;
 const fullWeekendPrice = 150;
 const fullNonResidential = 100;
 const fullYoungWomenCost = 130;
+const fullAfterEBCost = 180;
 // const dayPrice = 20;
 // const breakfastCost = 9;
 // const lunchCost = 16;
@@ -171,7 +172,7 @@ class RegistrationForm extends Component {
         if (this.state.sundayBreakfast) { totalCost += breakfastCost }
         if (this.state.sundayLunch) { totalCost += lunchCost }
         */
-
+			//TODO set price to 180 after 31st July
 				totalCost = fullNonResidential;
 			} else if (this.state.registrationType === "youngWomen") {
 				totalCost = fullYoungWomenCost;
@@ -247,7 +248,7 @@ class RegistrationForm extends Component {
 				form.append("submission[data][9][values][0]", escape(this.state.registrationType));
 			}
 
-			if (this.state.registrationType === "full" || this.state.registrationType === "earlyBird") {
+			if (this.state.registrationType === "full" || this.state.registrationType === "earlyBird" || this.state.registrationType === "fullAfterEB") {
 				form.append("submission[data][10][values][0]", escape(this.state.weekendDinnerAttendance));
 				form.append("submission[data][11][values][0]", "friday");
 				form.append("submission[data][11][values][1]", "saturday");
@@ -589,10 +590,11 @@ class RegistrationForm extends Component {
 							)}
 							<option value="youngWomen">Concession / Student - ${fullYoungWomenCost}</option>
 							<option value="nonResidential">Non-Residential - ${fullNonResidential}</option>
+							<option value="fullAfterEB">Registration (after 31st July) ${fullAfterEBCost}</option>
 						</select>
 						{/* <br />
 						<br /> */}
-						{this.state.registrationType === "full" ? (
+						{this.state.registrationType === "full" || this.state.registrationType === "fullAfterEB" ? (
 							<section>
 								{/* <strong>Will you be attending the Friday night dinner? </strong>
 								<br />
