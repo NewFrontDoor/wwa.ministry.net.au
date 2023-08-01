@@ -172,7 +172,7 @@ class RegistrationForm extends Component {
         if (this.state.sundayBreakfast) { totalCost += breakfastCost }
         if (this.state.sundayLunch) { totalCost += lunchCost }
         */
-			//TODO set price to 180 after 31st July
+				//TODO set price to 180 after 31st July
 				totalCost = fullNonResidential;
 			} else if (this.state.registrationType === "youngWomen") {
 				totalCost = fullYoungWomenCost;
@@ -248,7 +248,11 @@ class RegistrationForm extends Component {
 				form.append("submission[data][9][values][0]", escape(this.state.registrationType));
 			}
 
-			if (this.state.registrationType === "full" || this.state.registrationType === "earlyBird" || this.state.registrationType === "fullAfterEB") {
+			if (
+				this.state.registrationType === "full" ||
+				this.state.registrationType === "earlyBird" ||
+				this.state.registrationType === "fullAfterEB"
+			) {
 				form.append("submission[data][10][values][0]", escape(this.state.weekendDinnerAttendance));
 				form.append("submission[data][11][values][0]", "friday");
 				form.append("submission[data][11][values][1]", "saturday");
@@ -583,14 +587,14 @@ class RegistrationForm extends Component {
 						{requiredField}
 						<br />
 						<select name="registrationType" value={this.state.registrationType} onChange={this.handleChange.bind(this)}>
-							{earlyBirdValid ? (
+							{/* {earlyBirdValid ? (
 								<option value="full">Residential (early bird) - ${currentFullCost}</option>
 							) : (
 								<option value="full"> Residential - ${currentFullCost}</option>
-							)}
-							<option value="youngWomen">Concession / Student - ${fullYoungWomenCost}</option>
+							)} */}
+							<option value="fullAfterEB">Residential - ${fullAfterEBCost}</option>
+							<option value="youngWomen">Concession - ${fullYoungWomenCost}</option>
 							<option value="nonResidential">Non-Residential - ${fullNonResidential}</option>
-							<option value="fullAfterEB">Registration (after 31st July) ${fullAfterEBCost}</option>
 						</select>
 						{/* <br />
 						<br /> */}
