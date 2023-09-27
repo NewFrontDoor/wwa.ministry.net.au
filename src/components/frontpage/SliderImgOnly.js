@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import sliderimg from "../../assets/img/WWF2023_facebook-upscale.jpeg";
+import sliderimg from "../../assets/img/WWA Website Banner.png";
 
 const HeaderContainer = styled.div`
 	margin-top: 81px;
@@ -13,6 +13,6 @@ const HeaderContainer = styled.div`
 
 export default () => (
 	<HeaderContainer>
-		<img src={sliderimg} alt="Women's Weekend Away 2023 Banner" />
+		<img src={sliderimg} alt="Women's Weekend Away Banner" />
 	</HeaderContainer>
 );

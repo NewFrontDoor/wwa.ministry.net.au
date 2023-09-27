@@ -20,7 +20,7 @@ const fullAfterEBCost = 180;
 // const dinnerCost = 19;
 //const registrationCutoff = new Date("2023-08-14 00:00");
 //const registrationsOpen = registrationCutoff.getTime() > Date.now();
-const registrationsOpen = true;
+const registrationsOpen = false;
 //const earlyBirdCutoff = new Date('2019-07-13');
 //const earlyBirdValid = earlyBirdCutoff.getTime() > Date.now();
 const earlyBirdValid = true;
@@ -390,7 +390,7 @@ class RegistrationForm extends Component {
 			registrationForm = (
 				<section>
 					<p>
-						8-10th September 2023
+						20th - 22nd September 2024
 						<br />
 						<a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
 							Tamar Valley Resort, Grindelwald
@@ -399,7 +399,7 @@ class RegistrationForm extends Component {
 
 					{earlyBirdValid ? <p>{/* Early Bird Closes 12th July 2019
 							<br /> */}</p> : ""}
-					<p>Registrations Close 13th August 2023</p>
+					{/* <p>Registrations Close 16th August 2024</p> */}
 					<em style={{ fontWeight: "normal" }}>
 						Unfortunately children cannot be provided for, however mothers with babies are welcome.
 					</em>
@@ -872,7 +872,7 @@ class RegistrationForm extends Component {
 			registrationForm = (
 				<section>
 					<p>
-						8-10th September 2023
+						20th - 22nd September 2024
 						<br />
 						<a href="https://goo.gl/maps/hpcuHaQf8He1n17T8" rel="noreferrer noopener" target="_blank">
 							Tamar Valley Resort, Grindelwald
@@ -881,14 +881,14 @@ class RegistrationForm extends Component {
 
 					{earlyBirdValid ? <p>{/* Early Bird Closes 12th July 2023
 							<br /> */}</p> : ""}
-					<p>Registrations Close 13th August 2023</p>
+					{/* <p>Registrations Close 16th August 2023</p> */}
 					<br />
-					<h3 style={{ color: "#000" }}>Registrations for this event have now closed.</h3>
+					<h3 style={{ color: "#000" }}>Registrations for this event have not yet opened.</h3>
 					<br />
 					<br />
 					<p>
 						If you have any questions regarding the event please contact{" "}
-						<a href="mailto:admin@wwa.ministry.net.au">admin@wwa.ministry.net.au</a>
+						<a href="mailto:pctas.wwa@gmail.com">pctas.wwa@gmail.com</a>
 					</p>
 				</section>
 			);

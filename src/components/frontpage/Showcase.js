@@ -26,8 +26,25 @@ export default () => (
 					{/* Feature */}
 					<div className="col-sm-4 feature">
 						<div className="img_box">
-							<a href="/2023Weekend">
+							<a href="/2024Weekend">
 								<img alt="" src={Weekend2019} />
+								<span className="circle">
+									<span className="plus">&#43;</span>
+								</span>
+							</a>
+						</div>
+						<div className="text">
+							<h6>2024 Weekend Away</h6>
+							<p style={{ fontSize: "16px" }}>
+								20th - 22nd September at <a href="https://www.tamarvalleyresort.com.au/" target="_blank" rel="noopener noreferrer">Tamar Valley Resort, Launceston</a>.
+							</p>
+						</div>
+					</div>
+					{/* Feature */}
+					<div className="col-sm-4 feature last">
+						<div className="img_box">
+							<a href="/2023Weekend">
+								<img alt="" src={Register} />
 								<span className="circle">
 									<span className="plus">&#43;</span>
 								</span>
@@ -36,29 +53,7 @@ export default () => (
 						<div className="text">
 							<h6>2023 Weekend Away</h6>
 							<p style={{ fontSize: "16px" }}>
-								8th - 10th September at Tamar Valley Resort, Launceston. <a href="/Register">Register Now</a> and stay
-								up to date on our{" "}
-								<a href="https://www.facebook.com/WWATasmania" rel="noopener noreferrer" target="_blank">
-									Facebook
-								</a>{" "}
-								page
-							</p>
-						</div>
-					</div>
-					{/* Feature */}
-					<div className="col-sm-4 feature last">
-						<div className="img_box">
-							<a href="/2019Weekend">
-								<img alt="" src={Register} />
-								<span className="circle">
-									<span className="plus">&#43;</span>
-								</span>
-							</a>
-						</div>
-						<div className="text">
-							<h6>2019 Weekend Away</h6>
-							<p style={{ fontSize: "16px" }}>
-								Missed out on joining us last time - check out the talks <a href="/2019Weekend">here</a>
+								Missed out on joining us last time - check out the talks <a href="/2023Weekend">here</a>
 							</p>
 						</div>
 					</div>

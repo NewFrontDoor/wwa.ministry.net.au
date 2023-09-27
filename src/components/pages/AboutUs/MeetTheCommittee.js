@@ -4,7 +4,6 @@ import Person from "../../models/Person";
 import Lyndal from "../../../assets/img/Lyndal.png";
 import Elya from "../../../assets/img/Richardson,Elya.png";
 import Sharon from "../../../assets/img/Sharon.jpg";
-import Jane from "../../../assets/img/Maarseveen,Jane.png";
 import Ngaire from "../../../assets/img/Ngaire.png";
 //import Blank from "../../../assets/img/Blank.png";
 
@@ -43,13 +42,6 @@ export default () => (
 					mobileHeight="mh-610px"
 					image={Sharon}
 					bio="Sharon is representing the NW coast on the WWA committee.  She worships at Ulverstone Presbyterian Church and currently serves on the Board as the church treasurer.  Sharon works in administration within the agricultural industry and has, this year, embarked on the challenge and delight of leading a women’s bible study group. <br/><br/>Sharon enjoys driving this wonderful country during her holidays, and has previously circumnavigated the country in her much loved Toyota.  She enjoys board games, jigsaw puzzles, reading and trying out new restaurants with her friends and family.  She has served in ministry in the Philippines during her periods of long service leave."
-				/>
-				<Person
-					name="Jane Maarseveen"
-					title=""
-					mobileHeight="mh-610px"
-					image={Jane}
-					bio="Jane worships at Cornerstone Presbyterian Church Hobart where she serves as a deacon, supporting anyone in need. After nearly 50 years as a nurse she now volunteers as a Pastoral Carer at a Hobart Aged Care facility which she finds fulfilling and rewarding.<br/><br/>Jane is married to Heinz, her Dutch husband, who she met in Iceland 46 years ago! They recently returned there on holiday - make sure you ask her about it! Jane and Heinz have two sons, one grandson, two step grandkids, a cat named Dora and three chickens!<br/><br/>Jane loves walking in the bush near their home in the foothills of Mount Wellington, gardening and photography. She is looking forward to meeting with women from around the state, enjoying fellowship and renewing long term friendships."
 				/>
 			</div>
 		</div>

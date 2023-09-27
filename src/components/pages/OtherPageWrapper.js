@@ -6,7 +6,8 @@ import Retreat2018 from "./Retreats/Retreat2018";
 import Retreat2019 from "./Retreats/Retreat2019.js";
 import MeetTheCommittee from "./AboutUs/MeetTheCommittee";
 import Retreat2021 from "./Retreats/Retreat2021";
-import Retreat2023 from "./Retreats/Retreat2023.js";
+import Retreat2023 from "./Retreats/Retreat2023";
+import Retreat2024 from "./Retreats/Retreat2024";
 import Worship from "./Resources/Worship";
 //import Missions from "./Resources/Missions";
 import WhatWeBelieve from "./AboutUs/WhatWeBelieve";
@@ -23,6 +24,7 @@ export default () => (
 			<Route exact path="/2019Weekend" component={Retreat2019} />
 			<Route exact path="/2021Weekend" component={Retreat2021} />
 			<Route exact path="/2023Weekend" component={Retreat2023} />
+			<Route exact path="/2024Weekend" component={Retreat2024} />
 			<Route exact path="/Worship" component={Worship} />
 			{/* <Route exact path="/Missions" component={Missions} /> */}
 
